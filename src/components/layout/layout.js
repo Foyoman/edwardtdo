@@ -43,7 +43,7 @@ const Layout = ({ pageTitle, children, className }) => {
         </ul>
       </nav>
       <main>
-        <h1 className="heading">{pageTitle}</h1>
+        <h1 className="heading" style={{ marginTop: 0 }}>{pageTitle}</h1>
         {children}
       </main>
     </div>

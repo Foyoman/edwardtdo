@@ -5,6 +5,8 @@ $black-glass: rgba(0, 0, 0, 0.4);
 	-webkit-backdrop-filter: blur(10px);
 	backdrop-filter: blur(10px);
 	border-radius: 6px;
+	background: $white-glass;
+	padding: 1rem;
 }
 
 html,
@@ -22,14 +24,16 @@ body {
   font-family: sans-serif;
 	padding-top: 3rem;
 
+	main {
+		@include gloss;
+	}
+
 	.site-title {
 		@include gloss;
-		padding: 1rem;
-		background: $white-glass;
 		font-size: 3rem;
 		color: gray;
 		font-weight: 700;
-		margin-bottom: 3rem;
+		margin-bottom: 1rem;
 	}
 
 	.heading {
@@ -37,9 +41,9 @@ body {
 	}
 	
 	.nav-links {
+		@include gloss;
 		display: flex;
 		list-style: none;
-		padding-left: 0;
 
 		.nav-link-item {
 			padding-right: 2rem;
