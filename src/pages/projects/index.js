@@ -6,6 +6,7 @@ import Seo from '../../components/seo'
 const ProjectsPage = ({ data }) => {
   return (
     <Layout pageTitle="My Projects">
+<<<<<<< HEAD
       {
         data.allMdx.nodes.map(node => (
           <article key={node.id}>
@@ -18,10 +19,13 @@ const ProjectsPage = ({ data }) => {
           </article>
         ))
       }
+=======
+>>>>>>> 95bca4f (undoing mdx for projects)
     </Layout>
   )
 }
 
+<<<<<<< HEAD
 export const query = graphql`
   query {
     allMdx(filter: { frontmatter: { page: { eq: "projects" } } }) {
@@ -37,6 +41,8 @@ export const query = graphql`
   }
 `
 
+=======
+>>>>>>> 95bca4f (undoing mdx for projects)
 export const Head = () => <Seo title="My Projects" />
 
 export default ProjectsPage
