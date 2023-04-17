@@ -1,9 +1,19 @@
+$white-glass: rgba(255, 255, 255, 0.3);
+$black-glass: rgba(0, 0, 0, 0.4);
+
+@mixin gloss {
+	-webkit-backdrop-filter: blur(10px);
+	backdrop-filter: blur(10px);
+	border-radius: 6px;
+}
+
 html,
 body {
 	min-height: 100%;
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	background: lavender;
 }
 
 .container {
@@ -13,6 +23,9 @@ body {
 	padding-top: 3rem;
 
 	.site-title {
+		@include gloss;
+		padding: 1rem;
+		background: $white-glass;
 		font-size: 3rem;
 		color: gray;
 		font-weight: 700;
