@@ -1,4 +1,5 @@
 $white-glass: rgba(255, 255, 255, 0.3);
+$white-glass-hover: rgba(255, 255, 255, 0.1);
 $black-glass: rgba(0, 0, 0, 0.4);
 
 @mixin gloss {
@@ -8,6 +9,10 @@ $black-glass: rgba(0, 0, 0, 0.4);
 	background: $white-glass;
 	padding: 1rem;
 }
+
+// * {
+// 	transition: all 0.2s;
+// }
 
 html,
 body {
@@ -34,6 +39,43 @@ body {
 		color: gray;
 		font-weight: 700;
 		margin-bottom: 1rem;
+		// cursor: default;
+		transition: all 0.2s;
+
+		.title {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+			.chevron {
+				background: $black-glass;
+				border-radius: 6px;
+				color: white;
+			}
+
+			.tag {
+				.closing-tag {
+					// transition: all 0.2s;
+
+					&.expanded {
+						visibility: hidden;
+					}
+				}
+			}
+		}
+
+		.props {
+			display: none;
+
+			&.expanded {
+				display: block;
+			}
+
+			pre {
+				margin: 0;
+				font-size: 1rem;
+			}
+		}
 	}
 
 	.heading {

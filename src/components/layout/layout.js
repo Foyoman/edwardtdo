@@ -1,8 +1,11 @@
-import * as React from 'react'
+import React, { useState } from 'react'
 import { Link, useStaticQuery, graphql } from 'gatsby'
 import './layout.scss'
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 const Layout = ({ pageTitle, children, className }) => {
+  const [expand, setExpand] = useState(false);
+
 	const data = useStaticQuery(graphql`
 		query {
 			site {
@@ -13,10 +16,26 @@ const Layout = ({ pageTitle, children, className }) => {
 		}
 	`)
 
+  const handleClick = (e) => {
+    setExpand(!expand);
+  }
+
   return (
     <div className={`container ${className}`}>
 			<header className="site-title">
-				{`<${data.site.siteMetadata.title} />`}
+        <div className="title">
+          <div className="tag">
+            {`<${data.site.siteMetadata.title}`}
+            <span className={`closing-tag ${ expand ? 'expanded' : '' }`}>{` />`}</span>
+          </div>
+          <KeyboardArrowDownIcon className="chevron" onClick={handleClick} />
+        </div>
+        <div className={`props ${ expand ? 'expanded' : '' }`}>
+          <pre>    email="edwardtdo@gmail.com"</pre>
+          <pre>    linkedIn="<a href="https://www.linkedin.com/in/edwardtdo">https://www.linkedin.com/in/edwardtdo</a>"</pre>
+          <pre>    gitHub="<a href="https://www.github.com/Foyoman">https://www.github.com/Foyoman</a>"</pre>
+          {`/>`}
+        </div>
 			</header>
       <nav>
         <ul className="nav-links">
