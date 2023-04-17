@@ -1,4 +1,5 @@
 import React from "react"
+import Seo from '../../components/seo'
 
 const TonguistPage = () => {
 	return (
@@ -7,3 +8,7 @@ const TonguistPage = () => {
 		</pre>
 	)
 }
+
+export const Head = () => <Seo title="tonguist" />
+
+export default TonguistPage

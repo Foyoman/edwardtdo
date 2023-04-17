@@ -22,24 +22,9 @@ const BlogPage = ({ data }) => {
   )
 }
 
-// export const query = graphql`
-//   query {
-//     allMdx(sort: { frontmatter: { date: DESC }}) {
-//       nodes {
-//         frontmatter {
-//           date(formatString: "MMMM D, YYYY")
-//           title
-//           slug
-//         }
-//         id
-//       }
-//     }
-//   }
-// `
-
 export const query = graphql`
   query {
-    allMdx(filter: { frontmatter: { page: { eq: "blog" } } }) {
+    allMdx(sort: { frontmatter: { date: DESC }}) {
       nodes {
         frontmatter {
           date(formatString: "MMMM D, YYYY")
