@@ -21,22 +21,7 @@ const Layout = ({ pageTitle, children, className }) => {
   }
 
   return (
-    <div className={`container ${className}`}>
-			<header className="site-title">
-        <div className="title">
-          <div className="tag">
-            {`<${data.site.siteMetadata.title}`}
-            <span className={`closing-tag ${ expand ? 'expanded' : '' }`}>{` />`}</span>
-          </div>
-          <KeyboardArrowDownIcon className="chevron" onClick={handleClick} />
-        </div>
-        <div className={`props ${ expand ? 'expanded' : '' }`}>
-          <pre>    email="edwardtdo@gmail.com"</pre>
-          <pre>    linkedIn="<a href="https://www.linkedin.com/in/edwardtdo">https://www.linkedin.com/in/edwardtdo</a>"</pre>
-          <pre>    gitHub="<a href="https://www.github.com/Foyoman">https://www.github.com/Foyoman</a>"</pre>
-          {`/>`}
-        </div>
-			</header>
+    <div className={`page ${className}`}>
       <nav>
         <ul className="nav-links">
           <li className="nav-link-item">
@@ -61,6 +46,21 @@ const Layout = ({ pageTitle, children, className }) => {
           </li>
         </ul>
       </nav>
+			<header className="site-title">
+        <div className="title">
+          <div className="tag">
+            {`<${data.site.siteMetadata.title}`}
+            <span className={`closing-tag ${ expand ? 'expanded' : '' }`}>{` />`}</span>
+          </div>
+          <KeyboardArrowDownIcon className="chevron" onClick={handleClick} />
+        </div>
+        <div className={`props ${ expand ? 'expanded' : '' }`}>
+          <pre>    email="edwardtdo@gmail.com"</pre>
+          <pre>    linkedIn="<a href="https://www.linkedin.com/in/edwardtdo">https://www.linkedin.com/in/edwardtdo</a>"</pre>
+          <pre>    gitHub="<a href="https://www.github.com/Foyoman">https://www.github.com/Foyoman</a>"</pre>
+          {`/>`}
+        </div>
+			</header>
       <main>
         <h1 className="heading" style={{ marginTop: 0 }}>{pageTitle}</h1>
         {children}
