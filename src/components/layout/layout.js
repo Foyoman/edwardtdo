@@ -3,17 +3,7 @@ import { Link, useStaticQuery, graphql } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 import './layout.scss'
 
-const Layout = ({ pageTitle, children, className }) => {
-	const data = useStaticQuery(graphql`
-		query {
-			site {
-				siteMetadata {
-					title
-				}
-			}
-		}
-	`)
-
+const Layout = ({ children, className }) => {
   return (
     <div className={`page ${className}`}>
       <nav>
@@ -46,23 +36,7 @@ const Layout = ({ pageTitle, children, className }) => {
           </li>
         </ul>
       </nav>
-			{/* <header className="container site-title">
-        <div className="title">
-          <div className="tag">
-            {`<${data.site.siteMetadata.title}`}
-            <span className={`closing-tag ${ expand ? 'expanded' : '' }`}>{` />`}</span>
-          </div>
-          <KeyboardArrowDownIcon className="chevron" onClick={handleClick} />
-        </div>
-        <div className={`props ${ expand ? 'expanded' : '' }`}>
-          <pre>    email="edwardtdo@gmail.com"</pre>
-          <pre>    linkedIn="<a href="https://www.linkedin.com/in/edwardtdo">https://www.linkedin.com/in/edwardtdo</a>"</pre>
-          <pre>    gitHub="<a href="https://www.github.com/Foyoman">https://www.github.com/Foyoman</a>"</pre>
-          {`/>`}
-        </div>
-			</header> */}
       <main className="container">
-        {/* <h1 className="heading" style={{ marginTop: 0 }}>{pageTitle}</h1> */}
         {children}
       </main>
     </div>

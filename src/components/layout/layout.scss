@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
+
 $white-glass: rgba(255, 255, 255, 0.3);
 $white-glass-hover: rgba(255, 255, 255, 0.1);
 $black-glass: rgba(0, 0, 0, 0.4);
@@ -12,14 +14,14 @@ $black-glass: rgba(0, 0, 0, 0.4);
 	transition: all 0.2s;
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
 }
 
 html,
 body {
 	min-height: 100%;
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+	// margin: 0;
+	// padding: 0;
 	background: lavender;
 }
 
@@ -39,7 +41,10 @@ body {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		position: sticky;
+		position: fixed;
+		z-index: 3;
+		top: 0;
+		width: 100%;
 		padding: 2rem;
 
 		.donut {
@@ -60,6 +65,10 @@ body {
 				}
 			}
 		}
+	}
+
+	main {
+		padding-top: 124px;
 	}
 
 	.heading {

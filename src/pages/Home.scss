@@ -9,53 +9,76 @@ $black-glass: rgba(0, 0, 0, 0.4);
 }
 
 .home-page {
-	.site-title {
-		font-size: 3rem;
-		color: gray;
-		font-weight: 700;
-		margin-bottom: 1rem;
-		// cursor: default;
-		transition: all 0.2s;
+	.body {
+		padding: 3rem 2rem;
 
-		.title {
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
+		.intro {
+			height: calc(100vh - 124px - 3rem);
 
-			.chevron {
-				background: $black-glass;
-				border-radius: 6px;
-				color: white;
-				cursor: pointer;
-				transition: all 0.2s;
-
-				&:hover {
-					opacity: 0.8;
-				}
+			.hello {
+				font-family: 'Fira Code', monospace;
 			}
 
-			.tag {
-				.closing-tag {
-					// transition: all 0.2s;
-
+			.site-title {
+				font-size: 4rem;
+				color: rebeccapurple;
+				font-weight: 700;
+				margin-bottom: 1rem;
+				// cursor: default;
+				transition: all 0.2s;
+		
+				.title {
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+		
+					.chevron {
+						background: $black-glass;
+						border-radius: 6px;
+						color: white;
+						cursor: pointer;
+						transition: all 0.2s;
+		
+						&:hover {
+							opacity: 0.8;
+						}
+					}
+		
+					.tag {
+						.closing-tag {
+							// transition: all 0.2s;
+		
+							&.expanded {
+								visibility: hidden;
+							}
+						}
+					}
+				}
+		
+				.props {
+					display: none;
+		
 					&.expanded {
-						visibility: hidden;
+						display: block;
+					}
+		
+					pre {
+						margin: 0;
+						font-size: 1rem;
 					}
 				}
 			}
-		}
 
-		.props {
-			display: none;
-
-			&.expanded {
-				display: block;
+			.i-am {
+				font-size: 4rem;
+				opacity: 0.8;
+				margin: 2rem 0 3rem 0;
 			}
 
-			pre {
-				margin: 0;
-				font-size: 1rem;
+			.brief {
+				font-family: 'Fira Code', monospace;
 			}
 		}
+
 	}
 }
