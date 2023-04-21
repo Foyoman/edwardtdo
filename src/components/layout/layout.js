@@ -53,7 +53,7 @@ const Layout = ({ pageTitle, children, className }) => {
           </li>
         </ul>
       </nav>
-			<header className="site-title">
+			<header className="container site-title">
         <div className="title">
           <div className="tag">
             {`<${data.site.siteMetadata.title}`}
@@ -68,7 +68,7 @@ const Layout = ({ pageTitle, children, className }) => {
           {`/>`}
         </div>
 			</header>
-      <main>
+      <main className="container">
         <h1 className="heading" style={{ marginTop: 0 }}>{pageTitle}</h1>
         {children}
       </main>

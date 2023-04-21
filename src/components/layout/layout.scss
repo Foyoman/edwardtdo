@@ -29,6 +29,11 @@ body {
   font-family: sans-serif;
 	// padding-top: 3rem;
 
+	.container {
+		max-width: 900px;
+		margin: auto;
+	}
+
 	nav {
 		@include gloss;
 		display: flex;
@@ -56,14 +61,8 @@ body {
 			}
 		}
 	}
-	
-
-	main {
-		@include gloss;
-	}
 
 	.site-title {
-		@include gloss;
 		font-size: 3rem;
 		color: gray;
 		font-weight: 700;
