@@ -1,11 +1,34 @@
-import * as React from 'react'
+import React, { useState } from 'react'
 import Layout from '../components/layout/layout'
 import { StaticImage } from 'gatsby-plugin-image'
 import Seo from '../components/seo'
+import './Home.scss';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 const IndexPage = () => {
+  const [expand, setExpand] = useState(false);
+
+  const handleClick = (e) => {
+    setExpand(!expand);
+  }
+
   return (
     <div className='home-page'>
+      <div className="site-title">
+        <div className="title">
+          <div className="tag">
+            {`<edwardtdo`}
+            <span className={`closing-tag ${ expand ? 'expanded' : '' }`}>{` />`}</span>
+          </div>
+          <KeyboardArrowDownIcon className="chevron" onClick={handleClick} />
+        </div>
+        <div className={`props ${ expand ? 'expanded' : '' }`}>
+          <pre>    email="edwardtdo@gmail.com"</pre>
+          <pre>    linkedIn="<a href="https://www.linkedin.com/in/edwardtdo">https://www.linkedin.com/in/edwardtdo</a>"</pre>
+          <pre>    gitHub="<a href="https://www.github.com/Foyoman">https://www.github.com/Foyoman</a>"</pre>
+          {`/>`}
+        </div>
+			</div>
       <Layout pageTitle="Home">
         <p>
           Hi, I'm Edward. Welcome to my site! My two biggest loves in life are my dog Donut, and backpacking!

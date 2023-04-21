@@ -1,12 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Link, useStaticQuery, graphql } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 import './layout.scss'
-import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 const Layout = ({ pageTitle, children, className }) => {
-  const [expand, setExpand] = useState(false);
-
 	const data = useStaticQuery(graphql`
 		query {
 			site {
@@ -16,10 +13,6 @@ const Layout = ({ pageTitle, children, className }) => {
 			}
 		}
 	`)
-
-  const handleClick = (e) => {
-    setExpand(!expand);
-  }
 
   return (
     <div className={`page ${className}`}>
@@ -53,7 +46,7 @@ const Layout = ({ pageTitle, children, className }) => {
           </li>
         </ul>
       </nav>
-			<header className="container site-title">
+			{/* <header className="container site-title">
         <div className="title">
           <div className="tag">
             {`<${data.site.siteMetadata.title}`}
@@ -67,9 +60,9 @@ const Layout = ({ pageTitle, children, className }) => {
           <pre>    gitHub="<a href="https://www.github.com/Foyoman">https://www.github.com/Foyoman</a>"</pre>
           {`/>`}
         </div>
-			</header>
+			</header> */}
       <main className="container">
-        <h1 className="heading" style={{ marginTop: 0 }}>{pageTitle}</h1>
+        {/* <h1 className="heading" style={{ marginTop: 0 }}>{pageTitle}</h1> */}
         {children}
       </main>
     </div>
