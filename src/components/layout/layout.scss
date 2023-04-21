@@ -30,11 +30,18 @@ body {
 	// padding-top: 3rem;
 
 	nav {
+		@include gloss;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 		position: sticky;
 		padding: 2rem;
 
+		.donut {
+			border-radius: 50%;
+		}
+
 		.nav-links {
-			@include gloss;
 			display: flex;
 			list-style: none;
 	
