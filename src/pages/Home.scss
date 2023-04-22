@@ -12,21 +12,43 @@ $black-glass: rgba(0, 0, 0, 0.4);
 	.body {
 		padding: 3rem 2rem;
 
-		.intro {
+		.section {
 			height: calc(100vh - 124px - 3rem);
 
+			h2 {
+				letter-spacing: 1.3px;
+				display: block;
+				font-size: 2em;
+				padding: 2rem 0 1rem 0;
+				margin-bottom: 1rem;
+				border-bottom: 1px solid #e6e6fa70;
+
+				span {
+					font-family: 'Fira Code', monospace;
+					font-size: 0.9em;
+					color: mediumpurple;
+					margin-right: 1rem;
+				}
+			}
+
+			p {
+				font-family: 'Fira Code', monospace;
+				margin: 0.5rem 0;
+			}
+		}
+
+		.intro {
 			.hello {
 				font-family: 'Fira Code', monospace;
 			}
 
 			.site-title {
-				color: mediumpurple;
 				font-size: 4rem;
 				font-weight: 700;
 				margin-bottom: 1rem;
 				// cursor: default;
 				transition: all 0.2s;
-		
+				
 				.title {
 					display: flex;
 					align-items: center;
@@ -45,10 +67,15 @@ $black-glass: rgba(0, 0, 0, 0.4);
 					}
 		
 					.tag {
+						color: mediumpurple;
+
 						.closing-tag {
+							color: mediumpurple;
+						
 							// transition: all 0.2s;
 		
 							&.expanded {
+								// color: mediumpurple;
 								visibility: hidden;
 							}
 						}
@@ -56,6 +83,7 @@ $black-glass: rgba(0, 0, 0, 0.4);
 				}
 		
 				.props {
+					color: mediumpurple;
 					display: none;
 		
 					&.expanded {
@@ -63,6 +91,7 @@ $black-glass: rgba(0, 0, 0, 0.4);
 					}
 		
 					pre {
+						color: mediumpurple;
 						margin: 0;
 						font-size: 1rem;
 					}
@@ -73,11 +102,10 @@ $black-glass: rgba(0, 0, 0, 0.4);
 				font-size: 4rem;
 				opacity: 0.8;
 				margin: 2rem 0;
-				color: #DDDAD6;
+				color: lavender;
 			}
 
 			.brief {
-				font-family: 'Fira Code', monospace;
 				margin: 1rem 0;
 			}
 
@@ -86,5 +114,18 @@ $black-glass: rgba(0, 0, 0, 0.4);
 			}
 		}
 
+		.about-me {
+			display: flex;
+			flex-direction: column;
+
+			img {
+				margin: 1rem auto 0;
+				width: 250px;
+				height: 250px;
+				border-radius: 50%;
+				object-fit: cover;
+				// box-shadow: ;
+			}
+		}
 	}
 }

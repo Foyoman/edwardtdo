@@ -15,6 +15,7 @@ $black-glass: rgba(0, 0, 0, 0.4);
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	color: rgb(221, 218, 214);
 }
 
 html,
@@ -25,8 +26,13 @@ body {
 	background: #473951;
 }
 
-p, h1, h2, h3, h4, h5, h6, a, button {
-	color: rgb(221, 218, 214);
+a {
+	color: mediumpurple;
+	transition: all 0.2s;
+
+	&:hover {
+		color: lavender;
+	}
 }
 
 .page {
@@ -75,12 +81,89 @@ p, h1, h2, h3, h4, h5, h6, a, button {
 		}
 	}
 
+	.left-overlay {
+		position: fixed;
+		margin-left: 40px;
+		bottom: 0px;
+		z-index: 10;
+
+		ul {
+			list-style: none;
+			padding-left: 0;
+
+			li {
+				display: block;
+
+				&:nth-child(2) {
+					padding: 10px 0;
+				}
+
+				a {
+					text-decoration: none;
+					cursor: pointer;
+					color: mediumpurple;
+					font-size: 1.6em;
+					max-width: 40px;
+					transition: all 0.2s;
+
+					&:hover {
+						color: #eeeeee;
+						opacity: 0.7;
+					}
+				}
+
+				&:hover {
+					// padding-bottom: 3px;
+				}
+			}
+		}
+
+		.left-stem {
+			border-left: 2px solid #9370d880;
+			height: 120px;
+			margin-left: 12px;
+		}
+	}
+
+	.right-overlay {
+		position: fixed;
+		right: 40px;
+		bottom: 0px;
+		z-index: 10;
+
+		ul {
+			list-style: none;
+			padding-left: 0;
+
+			li {
+				a {
+					text-decoration: none;
+					display: block;
+					max-width: 40px;
+					cursor: pointer;
+					color: mediumpurple;
+					padding-bottom: 10px;
+					writing-mode: vertical-rl;
+					font-family: 'Fira Code', monospace;
+					transition: all 0.2s;
+
+					&:hover {
+						color: #eeeeee;
+						opacity: 0.9;
+						// padding-bottom: 3px;
+					}
+				}
+			}
+		}
+
+		.right-stem {
+			border-left: 2px solid #9370d880;
+			height: 120px;
+			margin-left: 10px;
+		}
+	}
+
 	main {
 		padding-top: 124px;
 	}
-
-	.heading {
-		color: rebeccapurple;
-	}
-	
 }

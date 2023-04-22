@@ -17,7 +17,7 @@ const IndexPage = () => {
     <Layout pageTitle="home" className="home-page">
       <div className="body">
 
-        <div className="intro">
+        <div className="intro section">
           <p className="hello">Hi, I'm</p>
           <div className="site-title">
             <div className="title">
@@ -41,19 +41,29 @@ const IndexPage = () => {
           <Button label="Learn more about me" className="learn-more" />
         </div>
 
-        <StaticImage
-          alt="A picture of me, Edward, at Machu Picchu posing with a thumbs up"
-          src="../images/me.jpeg"
-          height={200}
-        />
-        <h2 className="heading">Expertise</h2>
-        <p>I'm a passion-driven developer currently focused on full-stack web development but with an insatiable interest for all areas of programming :). I'm currently focused on using the most relevant and modern full-stack web dev technologies such as:</p>
-        <ul>
-          <li>React, Next, Gatsby</li>
-          <li>Vue, Nuxt</li>
-          <li>Node, Express, MongoDB</li>
-          <li>Redux, GraphQL</li>
-        </ul>
+        <div className="about-me section">
+          <h2 className="heading">
+            <span>01.</span>
+            About Me
+          </h2>
+          <p>
+            Hello! My name is Elias, and I have a passion for creating things that live on the web. My interest in web development was initiated in my early childhood days of creating Starcraft maps for local players.
+          </p>
+          <p>
+            After working in Telecommunications for almost 9 years, I decided to pursue my passion for software engineering. In mid-2022, I completed the 3-month Software Engineering Immersive course at General Assembly in Sydney.
+          </p>
+          <p>
+            My experience in leadership and consulting on the client side has helped me develop a unique and holistic perspective on customer experience and effective team communication.
+          </p>
+          <p>
+            I’m currently open to job opportunities so please feel free to email or connect with me via LinkedIn.
+          </p>
+          <StaticImage
+            alt="A picture of me, Edward, at Machu Picchu posing with a thumbs up"
+            src="../images/me.jpeg"
+            height={200}
+          />
+        </div>
       </div>
     </Layout>
   )

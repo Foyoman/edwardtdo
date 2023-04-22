@@ -1,6 +1,8 @@
 import React from 'react'
-import { Link, useStaticQuery, graphql } from 'gatsby'
+import { Link } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import './layout.scss'
 
 const Layout = ({ children, className }) => {
@@ -36,6 +38,34 @@ const Layout = ({ children, className }) => {
           </li>
         </ul>
       </nav>
+      <div className="left-overlay">
+				<ul>
+					<li>
+						<a target="_" href="https://github.com/Foyoman">
+							<GitHubIcon />
+						</a>
+					</li>
+					<li>
+						<a target="_" href="https://www.linkedin.com/in/edwardtdo/">
+							<LinkedInIcon />
+						</a>
+					</li>
+				</ul>
+				<div className="left-stem" />
+			</div>
+      <div className="right-overlay">
+				<ul>
+					<li>
+						<a 
+              href="" 
+              onClick={() => window.open('mailto:edwardtdo@gmail.com?subject=Hello Edward!&body=What would you like to say?')}
+            >
+							edwardtdo@gmail.com
+						</a>
+					</li>
+				</ul>
+				<div className="right-stem" />
+			</div>
       <main className="container">
         {children}
       </main>
