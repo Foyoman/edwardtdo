@@ -20,8 +20,8 @@ $black-glass: rgba(0, 0, 0, 0.4);
 			}
 
 			.site-title {
+				color: mediumpurple;
 				font-size: 4rem;
-				color: rebeccapurple;
 				font-weight: 700;
 				margin-bottom: 1rem;
 				// cursor: default;
@@ -33,7 +33,7 @@ $black-glass: rgba(0, 0, 0, 0.4);
 					justify-content: space-between;
 		
 					.chevron {
-						background: $black-glass;
+						background: $white-glass;
 						border-radius: 6px;
 						color: white;
 						cursor: pointer;
@@ -72,11 +72,17 @@ $black-glass: rgba(0, 0, 0, 0.4);
 			.i-am {
 				font-size: 4rem;
 				opacity: 0.8;
-				margin: 2rem 0 3rem 0;
+				margin: 2rem 0;
+				color: #DDDAD6;
 			}
 
 			.brief {
 				font-family: 'Fira Code', monospace;
+				margin: 1rem 0;
+			}
+
+			.learn-more {
+				margin-top: 1rem;
 			}
 		}
 

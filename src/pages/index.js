@@ -4,6 +4,7 @@ import { StaticImage } from 'gatsby-plugin-image'
 import Seo from '../components/seo'
 import './Home.scss';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import Button from '../components/button/button';
 
 const IndexPage = () => {
   const [expand, setExpand] = useState(false);
@@ -37,6 +38,7 @@ const IndexPage = () => {
           <p className="brief">
             I'm a passion driven full-stack software engineer, with a knack for problem-solving, a keen eye for developing intuitive user experiences, and an eagerness for feature-building.
           </p>
+          <Button label="Learn more about me" className="learn-more" />
         </div>
 
         <StaticImage
