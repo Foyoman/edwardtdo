@@ -31,7 +31,7 @@ a {
 	transition: all 0.2s;
 
 	&:hover {
-		color: lavender;
+		color: #9370d890;
 	}
 }
 
@@ -62,6 +62,7 @@ a {
 		}
 
 		.nav-links {
+			z-index: 3;
 			display: flex;
 			list-style: none;
 	
@@ -81,11 +82,15 @@ a {
 		}
 	}
 
-	.left-overlay {
+	.overlay {
 		position: fixed;
-		margin-left: 40px;
 		bottom: 0px;
 		z-index: 10;
+
+		.stem {
+			border-left: 2px solid #9370d880;
+			height: 120px;
+		}
 
 		ul {
 			list-style: none;
@@ -94,72 +99,67 @@ a {
 			li {
 				display: block;
 
+				a {
+					text-decoration: none;
+					cursor: pointer;
+					color: mediumpurple;
+					max-width: 40px;
+					transition: all 0.2s;
+					font-family: 'Fira Code', monospace;
+	
+					&:hover {
+						color: #eeeeee;
+					}
+
+					.icon > path {
+						color: mediumpurple;
+					}
+				}
+			}
+		}
+	}
+
+	.left-overlay {
+		margin-left: 40px;
+
+		.left-stem {
+			margin-left: 12px;
+		}
+
+		ul {
+			li {
 				&:nth-child(2) {
 					padding: 10px 0;
 				}
 
 				a {
-					text-decoration: none;
-					cursor: pointer;
-					color: mediumpurple;
-					font-size: 1.6em;
-					max-width: 40px;
-					transition: all 0.2s;
-
 					&:hover {
-						color: #eeeeee;
 						opacity: 0.7;
 					}
 				}
-
-				&:hover {
-					// padding-bottom: 3px;
-				}
 			}
-		}
-
-		.left-stem {
-			border-left: 2px solid #9370d880;
-			height: 120px;
-			margin-left: 12px;
 		}
 	}
 
 	.right-overlay {
-		position: fixed;
 		right: 40px;
-		bottom: 0px;
-		z-index: 10;
+
+		.right-stem {
+			margin-left: 10px;
+		}
 
 		ul {
-			list-style: none;
-			padding-left: 0;
-
 			li {
 				a {
-					text-decoration: none;
 					display: block;
-					max-width: 40px;
-					cursor: pointer;
-					color: mediumpurple;
 					padding-bottom: 10px;
 					writing-mode: vertical-rl;
-					font-family: 'Fira Code', monospace;
-					transition: all 0.2s;
 
 					&:hover {
-						color: #eeeeee;
 						opacity: 0.9;
-						// padding-bottom: 3px;
 					}
 				}
 			}
-		}
-
-		.right-stem {
-			border-left: 2px solid #9370d880;
-			height: 120px;
-			margin-left: 10px;
 		}
 	}
 

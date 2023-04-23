@@ -13,13 +13,13 @@ $black-glass: rgba(0, 0, 0, 0.4);
 		padding: 3rem 2rem;
 
 		.section {
-			height: calc(100vh - 124px - 3rem);
+			min-height: calc(100vh - 124px - 3rem);
 
-			h2 {
+			.heading {
 				letter-spacing: 1.3px;
 				display: block;
 				font-size: 2em;
-				padding: 2rem 0 1rem 0;
+				padding: 1rem 0;
 				margin-bottom: 1rem;
 				border-bottom: 1px solid #e6e6fa70;
 
@@ -118,13 +118,13 @@ $black-glass: rgba(0, 0, 0, 0.4);
 			display: flex;
 			flex-direction: column;
 
-			img {
+			.me {
 				margin: 1rem auto 0;
 				width: 250px;
 				height: 250px;
 				border-radius: 50%;
 				object-fit: cover;
-				// box-shadow: ;
+				box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px;
 			}
 		}
 	}

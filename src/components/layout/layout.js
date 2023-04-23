@@ -38,22 +38,22 @@ const Layout = ({ children, className }) => {
           </li>
         </ul>
       </nav>
-      <div className="left-overlay">
+      <div className="left-overlay overlay">
 				<ul>
 					<li>
 						<a target="_" href="https://github.com/Foyoman">
-							<GitHubIcon />
+							<GitHubIcon className="icon" />
 						</a>
 					</li>
 					<li>
 						<a target="_" href="https://www.linkedin.com/in/edwardtdo/">
-							<LinkedInIcon />
+							<LinkedInIcon className="icon" />
 						</a>
 					</li>
 				</ul>
-				<div className="left-stem" />
+				<div className="left-stem stem" />
 			</div>
-      <div className="right-overlay">
+      <div className="right-overlay overlay">
 				<ul>
 					<li>
 						<a 
@@ -64,7 +64,7 @@ const Layout = ({ children, className }) => {
 						</a>
 					</li>
 				</ul>
-				<div className="right-stem" />
+				<div className="right-stem stem" />
 			</div>
       <main className="container">
         {children}

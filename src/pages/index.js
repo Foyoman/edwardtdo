@@ -47,7 +47,7 @@ const IndexPage = () => {
             About Me
           </h2>
           <p>
-            Hello! My name is Elias, and I have a passion for creating things that live on the web. My interest in web development was initiated in my early childhood days of creating Starcraft maps for local players.
+            Hello! My name is Edward, and I have a passion for creating visions of highly interactive and functional web apps. My interest in web development was initiated in my early childhood days of creating Starcraft maps for local players.
           </p>
           <p>
             After working in Telecommunications for almost 9 years, I decided to pursue my passion for software engineering. In mid-2022, I completed the 3-month Software Engineering Immersive course at General Assembly in Sydney.
@@ -62,6 +62,7 @@ const IndexPage = () => {
             alt="A picture of me, Edward, at Machu Picchu posing with a thumbs up"
             src="../images/me.jpeg"
             height={200}
+            className="me"
           />
         </div>
       </div>
