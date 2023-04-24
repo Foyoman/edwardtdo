@@ -19,5 +19,11 @@ module.exports = {
     "gatsby-plugin-mdx",
     "gatsby-transformer-sharp",
     "gatsby-plugin-sass",
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        icon: 'src/images/donut.jpg',
+      },
+    },
   ], 
 }
