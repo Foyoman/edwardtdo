@@ -132,24 +132,21 @@ $shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(
 
 		.projects {
 			.project {
-				height: 350px;
+				height: 300px;
 				position: relative;
-				margin-bottom: 2rem;
+				margin-bottom: 4rem;
+				display: flex;
+				align-items: center;
 
 				&.left {
 					.description {
-						align-items: flex-end;
 						text-align: right;
+						align-items: flex-end;
 					}
 				}
 
 				&.right {
-					display: flex;
-					.description {
-					}
-					
 					.gatsby-image-wrapper {
-						position: absolute;
 						right: 0;
 					}
 				}
@@ -163,7 +160,6 @@ $shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(
 					}
 	
 					h3 {
-						margin-top: 1.5rem;
 						margin-bottom: 0;
 						font-size: 2rem;
 	
@@ -200,16 +196,19 @@ $shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(
 				.gatsby-image-wrapper {
 					position: absolute;
 					top: 0;
+					z-index: 0;
+					height: 100%;
+					box-shadow: $shadow;
 				}
 
-				img {
-					position: absolute;
-					top: 0;
-					z-index: 0;
-					width: 60%;
-					box-shadow: $shadow;
-					border-radius: 3px;
-				}
+				// img {
+				// 	position: absolute;
+				// 	top: 0;
+				// 	z-index: 0;
+				// 	width: 60%;
+				// 	box-shadow: $shadow;
+				// 	border-radius: 3px;
+				// }
 			}
 		}
 	}

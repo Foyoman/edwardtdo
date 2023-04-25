@@ -88,13 +88,14 @@ const IndexPage = () => {
             <StaticImage 
               alt="A screenshot if wizzy-wig, a note-taking web app using markdown"
               src="../images/wizzy-wig.png"
+              height={300}
             />
           </div>
 
           <div className="project right">
             <div className="description">
               <h3>
-                <a href="https://wizzy-wig.netlify.app/">
+                <a href="https://the-brain-train.web.app/">
                   Brain Train
                 </a>
               </h3>
@@ -106,8 +107,9 @@ const IndexPage = () => {
               </h4>
             </div>
             <StaticImage 
-              alt="A screenshot if wizzy-wig, a note-taking web app using markdown"
-              src="../images/wizzy-wig.png"
+              alt="A screenshot if brain-train, a web-app for interactive brain-training games"
+              src="../images/brain-train.png"
+              height={300}
             />
           </div>
         </div>
