@@ -3,24 +3,30 @@ import { graphql } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import Layout from '../../components/layout/layout'
 import Seo from '../../components/seo'
+import './markdown.scss'
+import './post.scss'
 
 const BlogPost = ({ data, children }) => {
   const image = getImage(data.mdx.frontmatter.hero_image)
 
   return (
     <Layout pageTitle={data.mdx.frontmatter.title}>
-      <p>Posted: {data.mdx.frontmatter.date}</p>
-      <GatsbyImage
-        image={image}
-        alt={data.mdx.frontmatter.hero_image_alt}
-      />
-      <p>
-        Photo Credit:{" "}
-        <a href={data.mdx.frontmatter.hero_image_credit_link}>
-          {data.mdx.frontmatter.hero_image_credit_text}
-        </a>
-      </p>
-      {children}
+      <div className="blog-post">
+        <p className="subtext">Posted: {data.mdx.frontmatter.date}</p>
+        <GatsbyImage
+          image={image}
+          alt={data.mdx.frontmatter.hero_image_alt}
+        />
+        <p className="subtext">
+          Photo Credit:{" "}
+          <a href={data.mdx.frontmatter.hero_image_credit_link}>
+            {data.mdx.frontmatter.hero_image_credit_text}
+          </a>
+        </p>
+        <div className="markdown-body">
+          {children}
+        </div>
+      </div>
     </Layout>
   )
 }

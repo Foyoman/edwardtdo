@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Layout from '../components/layout/layout'
 import { StaticImage } from 'gatsby-plugin-image'
 import Seo from '../components/seo'
-import './Home.scss';
+import './home.scss';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import Button from '../components/button/button';
 
@@ -202,7 +202,7 @@ const IndexPage = () => {
               <p>Jun 2022 - Sep 2023</p>
               <p>
               { selectedTab === "leap" ? 
-                "One of two developers on the global marketing team. We employed a strong focus on component reusability, using isolated components driven development through the development of our UI component library based on our design system, and having everything linked to a headless CMS for easy access to our designers."
+                "A developer for the global marketing team, responsible for the development of sites under all global domains. We employed a strong focus on component reusability, using isolated components driven development through the development of our UI component library based on our design system, and having everything linked to a headless CMS for easy access to our designers."
                 : 
                 "Accumulating possibly over 600 hours of coding over 12 weeks, this coding bootcamp provided the intense and immersive environment needed for me to maximise the potential of my deep dive into the world of programming. We went through full-stack development, learning the most used and modern frameworks, and were taught the best coding principles and patterns to follow to become good developers in any field of programming."
               }

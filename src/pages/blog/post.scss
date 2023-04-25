@@ -1,0 +1,17 @@
+.blog-post {
+	.gatsby-image-wrapper {
+		height: 250px;
+		width: 100%;
+		margin: 4px 0;
+	}
+
+	.subtext {
+		color: rgba(221, 218, 214, 0.6);
+		font-size: 12px;
+	}
+
+	.markdown-body {
+		padding: 2rem 0 4rem;
+		background-color: transparent;
+	}
+}
