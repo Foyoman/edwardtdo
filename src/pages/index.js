@@ -208,10 +208,17 @@ const IndexPage = () => {
               }
               </p>
             </div>
+            { selectedTab === "leap" ? 
             <StaticImage 
               src="../images/leap.jpeg"
               className="logo"
             />
+            : 
+            <StaticImage 
+              src="../images/general-assembly.webp"
+              className="logo"
+            />
+            }
           </div>
         </div>
       </div>
@@ -219,6 +226,6 @@ const IndexPage = () => {
   )
 }
 
-export const Head = () => <Seo title="Home Page" />
+export const Head = () => <Seo title="Home" />
 
 export default IndexPage
