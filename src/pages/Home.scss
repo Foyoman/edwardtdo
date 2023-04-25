@@ -1,6 +1,7 @@
 $white-glass: rgba(255, 255, 255, 0.3);
 $white-glass-hover: rgba(255, 255, 255, 0.1);
 $black-glass: rgba(0, 0, 0, 0.4);
+$shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
 
 @mixin gloss {
 	-webkit-backdrop-filter: blur(10px);
@@ -13,6 +14,7 @@ $black-glass: rgba(0, 0, 0, 0.4);
 		padding: 3rem 2rem;
 
 		.section {
+			padding: 2rem 0;
 			min-height: calc(100vh - 124px - 3rem);
 
 			.heading {
@@ -20,7 +22,7 @@ $black-glass: rgba(0, 0, 0, 0.4);
 				display: block;
 				font-size: 2em;
 				padding: 1rem 0;
-				margin-bottom: 1rem;
+				margin-bottom: 1.5rem;
 				border-bottom: 1px solid #e6e6fa70;
 
 				span {
@@ -125,6 +127,89 @@ $black-glass: rgba(0, 0, 0, 0.4);
 				border-radius: 50%;
 				object-fit: cover;
 				box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px;
+			}
+		}
+
+		.projects {
+			.project {
+				height: 350px;
+				position: relative;
+				margin-bottom: 2rem;
+
+				&.left {
+					.description {
+						align-items: flex-end;
+						text-align: right;
+					}
+				}
+
+				&.right {
+					display: flex;
+					.description {
+					}
+					
+					.gatsby-image-wrapper {
+						position: absolute;
+						right: 0;
+					}
+				}
+
+				.description {
+					display: flex;
+					flex-direction: column;
+
+					h3, a, p, h4 {
+						z-index: 3;
+					}
+	
+					h3 {
+						margin-top: 1.5rem;
+						margin-bottom: 0;
+						font-size: 2rem;
+	
+						a {
+							text-decoration: none;
+							color: mediumpurple;
+							padding: 6px 10px;
+							border-radius: 3px;
+	
+							&:hover {
+								transition: 0.5s ease-in-out;
+								box-shadow: #9370d880;
+							}
+						}
+					}
+	
+					p {
+						width: 50%;
+						display: inline-block;
+						box-shadow: $shadow;
+						border-radius: 3px;
+						background-color: #393e46;
+						padding: 10px;
+					}
+
+					h4 {
+						width: 250px;
+						padding-right: 10px;
+						font-family: 'Fira Code', monospace;
+						font-weight: 300;
+					}
+				}
+
+				.gatsby-image-wrapper {
+					position: absolute;
+					top: 0;
+				}
+
+				img {
+					position: absolute;
+					top: 0;
+					z-index: 0;
+					width: 60%;
+					box-shadow: $shadow;
+					border-radius: 3px;
+				}
 			}
 		}
 	}

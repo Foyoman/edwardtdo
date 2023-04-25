@@ -65,6 +65,52 @@ const IndexPage = () => {
             className="me"
           />
         </div>
+
+        <div className="projects section">
+          <h2 className="heading">
+            <span>02.</span>
+            A few of my creations
+          </h2>
+          <div className="project left">
+            <div className="description">
+              <h3>
+                <a href="https://wizzy-wig.netlify.app/">
+                  wizzy-wig
+                </a>
+              </h3>
+              <p>
+                An in browser markdown note-taking web app with code block syntax highlighting, a file system, and tab management. Currently a frontend demo. Heavily inspired by Obsidian.
+              </p>
+              <h4>
+                TypeScript, React, Redux, SASS, MaterialUI
+              </h4>
+            </div>
+            <StaticImage 
+              alt="A screenshot if wizzy-wig, a note-taking web app using markdown"
+              src="../images/wizzy-wig.png"
+            />
+          </div>
+
+          <div className="project right">
+            <div className="description">
+              <h3>
+                <a href="https://wizzy-wig.netlify.app/">
+                  Brain Train
+                </a>
+              </h3>
+              <p>
+                A collection of highly interactive brain trainer games made straight out of DOM elements and state management.
+              </p>
+              <h4>
+                TypeScript, React, Redux, SASS, MaterialUI
+              </h4>
+            </div>
+            <StaticImage 
+              alt="A screenshot if wizzy-wig, a note-taking web app using markdown"
+              src="../images/wizzy-wig.png"
+            />
+          </div>
+        </div>
       </div>
     </Layout>
   )
