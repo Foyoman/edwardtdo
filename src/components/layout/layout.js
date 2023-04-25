@@ -12,7 +12,7 @@ const Layout = ({ children, className }) => {
         <StaticImage
           alt="A picture of Donut, a handsome beagle baby boy"
           src="../../images/donut.jpg"
-          height={60}
+          height={40}
           className="donut"
         />
         <ul className="nav-links">

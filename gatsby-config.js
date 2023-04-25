@@ -25,5 +25,6 @@ module.exports = {
         icon: 'src/images/donut.jpg',
       },
     },
+    "gatsby-plugin-netlify",
   ], 
 }

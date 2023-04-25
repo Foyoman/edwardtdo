@@ -8,6 +8,7 @@ import Button from '../components/button/button';
 
 const IndexPage = () => {
   const [expand, setExpand] = useState(false);
+  const [selectedTab, setSelectedTab] = useState("leap")
 
   const handleClick = (e) => {
     setExpand(!expand);
@@ -159,6 +160,57 @@ const IndexPage = () => {
               alt="A screenshot of ana, a forum board"
               src="../images/ana.png"
               height={300}
+            />
+          </div>
+        </div>
+
+        <div className="experience section">
+          <h2 className="heading">
+            <span>03.</span>
+            Relevant Experience
+          </h2>
+          <div className="tabs">
+            <div 
+              className={`leap tab ${selectedTab === 'leap' ? 'selected': ''}`}
+              onClick={() => setSelectedTab("leap")}
+            >
+              LEAP
+            </div>
+            <div 
+              className={`ga tab ${selectedTab === 'ga' ? 'selected' : ''}`}
+              onClick={() => setSelectedTab("ga")}
+            >
+              General Assembly
+            </div>
+          </div>
+          <div className={`banner ${selectedTab}`}>
+            <div className="text-container">
+              <h2>
+              { selectedTab === "leap" ? 
+                "Front-End Web Developer"
+                : 
+                "General Assembly"
+              }
+              </h2>
+              <h3>
+              { selectedTab === "leap" ? 
+                "LEAP Legal Software"
+                : 
+                "Software Engineering Immersive"
+              }
+              </h3>
+              <p>Jun 2022 - Sep 2023</p>
+              <p>
+              { selectedTab === "leap" ? 
+                "One of two developers on the global marketing team. We employed a strong focus on component reusability, using isolated components driven development through the development of our UI component library based on our design system, and having everything linked to a headless CMS for easy access to our designers."
+                : 
+                "Accumulating possibly over 600 hours of coding over 12 weeks, this coding bootcamp provided the intense and immersive environment needed for me to maximise the potential of my deep dive into the world of programming. We went through full-stack development, learning the most used and modern frameworks, and were taught the best coding principles and patterns to follow to become good developers in any field of programming."
+              }
+              </p>
+            </div>
+            <StaticImage 
+              src="../images/leap.jpeg"
+              className="logo"
             />
           </div>
         </div>

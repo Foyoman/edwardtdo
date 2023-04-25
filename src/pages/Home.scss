@@ -34,206 +34,275 @@ $shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(
 			}
 
 			p {
-				font-family: 'Fira Code', monospace;
 				margin: 0.5rem 0;
 			}
-		}
 
-		.intro {
-			.hello {
-				font-family: 'Fira Code', monospace;
+			&.intro {
+				p {
+					font-family: 'Fira Code', monospace;
+				}
+
+				.hello {
+					font-family: 'Fira Code', monospace;
+				}
+	
+				.site-title {
+					font-size: 4rem;
+					font-weight: 700;
+					margin-bottom: 1rem;
+					transition: all 0.2s;
+					
+					.title {
+						display: flex;
+						align-items: center;
+						justify-content: space-between;
+			
+						.chevron {
+							background: $white-glass;
+							border-radius: 6px;
+							color: white;
+							cursor: pointer;
+							transition: all 0.2s;
+			
+							&:hover {
+								opacity: 0.8;
+							}
+						}
+			
+						.tag {
+							color: mediumpurple;
+	
+							.closing-tag {
+								color: mediumpurple;
+			
+								&.expanded {
+									visibility: hidden;
+								}
+							}
+						}
+					}
+			
+					.props {
+						color: mediumpurple;
+						display: none;
+			
+						&.expanded {
+							display: block;
+						}
+			
+						pre {
+							color: mediumpurple;
+							margin: 0;
+							font-size: 1rem;
+						}
+					}
+				}
+	
+				.i-am {
+					font-size: 4rem;
+					opacity: 0.8;
+					margin: 2rem 0;
+					color: lavender;
+				}
+	
+				.brief {
+					margin: 1rem 0;
+				}
+	
+				.learn-more {
+					margin-top: 1rem;
+				}
 			}
+	
+			&.about-me {
+				display: flex;
+				flex-direction: column;
 
-			.site-title {
-				font-size: 4rem;
-				font-weight: 700;
-				margin-bottom: 1rem;
-				// cursor: default;
-				transition: all 0.2s;
-				
-				.title {
+				p {
+					font-family: 'Fira Code', monospace;
+				}
+	
+				.me {
+					margin: 1rem auto 0;
+					width: 250px;
+					height: 250px;
+					border-radius: 50%;
+					object-fit: cover;
+					box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px;
+				}
+			}
+	
+			&.projects {
+				.project {
+					height: 300px;
+					position: relative;
+					margin-bottom: 4rem;
+					display: flex;
+					align-items: center;
+	
+					&.left {
+						.description {
+							text-align: right;
+							align-items: flex-end;
+						}
+					}
+	
+					&.right {
+						.gatsby-image-wrapper {
+							right: 0;
+						}
+					}
+	
+					&.mobile {
+						height: 400px;
+	
+						.description {
+							text-align: center;
+							align-items: center;
+						}
+	
+						.mobile-screen {
+							box-sizing: content-box;
+							border-radius: 14px;
+							border: 6px solid black;
+						}
+	
+						.left {
+							position: absolute;
+							left: 10%;
+						}
+	
+						.right {
+							position: absolute;
+							right: 10%;
+						}
+					}
+	
+					.description {
+						display: flex;
+						flex-direction: column;
+	
+						h3, a, p, h4 {
+							z-index: 3;
+						}
+		
+						h3 {
+							margin-bottom: 5px;
+							font-size: 2rem;
+		
+							a {
+								text-decoration: none;
+								color: mediumpurple;
+								padding: 6px 10px;
+								border-radius: 3px;
+								transition: 0.5s all;
+		
+								&:hover {
+									box-shadow: #9370d880 0px 0px 0px 3px;
+								}
+							}
+						}
+		
+						p {
+							width: 50%;
+							display: inline-block;
+							box-shadow: $shadow;
+							border-radius: 3px;
+							background-color: #393e46;
+							padding: 10px;
+						}
+	
+						h4 {
+							width: 250px;
+							padding-right: 10px;
+							font-family: 'Fira Code', monospace;
+							font-weight: 300;
+						}
+					}
+	
+					.gatsby-image-wrapper {
+						position: absolute;
+						top: 0;
+						z-index: 0;
+						height: 100%;
+						box-shadow: $shadow;
+					}
+				}
+			}
+	
+			&.experience {
+				.tabs {
+					width: 100%;
+					display: flex;
+					justify-content: center;
+					gap: 0.5rem;
+					margin-bottom: 1rem;
+
+					.tab {
+						text-align: center;
+						font-family: 'Fira Code', monospace;
+						font-weight: 400;
+						cursor: pointer;
+						display: inline;
+						padding: 8px 14px;
+						margin: 0 5px;
+						list-style: none;
+						background-color: rgb(48, 52, 54);
+						// color: #222831;
+						border-radius: 2px;
+						transition: 0.5s all;
+
+						&.leap {
+							&.selected {
+								color: rgb(221, 218, 214);
+								background: #1e365e;
+							}
+						}
+
+						&.ga {
+							&.selected {
+								background: #E41A23;
+							}
+						}
+
+						&:hover {
+							box-shadow: inset #eeeeee 0px 0px 0px 2px;
+						}
+					}
+				}
+
+				.banner {
+					height: 320px;
+					width: 100%;
 					display: flex;
 					align-items: center;
 					justify-content: space-between;
-		
-					.chevron {
-						background: $white-glass;
-						border-radius: 6px;
-						color: white;
-						cursor: pointer;
-						transition: all 0.2s;
-		
-						&:hover {
-							opacity: 0.8;
+					padding: 1.5rem;
+
+					&.leap {
+						background: linear-gradient(90deg, #1e365e 0%, #1e365e 15%, #095494 100%);
+					}
+
+					&.ga {
+						background: linear-gradient(90deg, #E41A23 0%, #E41A23 15%, #E41A2380 100%);
+					}
+
+					.text-container {
+						width: 468px;
+						margin-right: 2rem;
+
+						h2 {
+							font-size: 2rem;
+							margin-bottom: 0.5rem;
 						}
 					}
-		
-					.tag {
-						color: mediumpurple;
 
-						.closing-tag {
-							color: mediumpurple;
-						
-							// transition: all 0.2s;
-		
-							&.expanded {
-								// color: mediumpurple;
-								visibility: hidden;
-							}
-						}
+					.logo {
+						aspect-ratio: 1/1;
+						height: 100%;
+						width: auto;
 					}
 				}
-		
-				.props {
-					color: mediumpurple;
-					display: none;
-		
-					&.expanded {
-						display: block;
-					}
-		
-					pre {
-						color: mediumpurple;
-						margin: 0;
-						font-size: 1rem;
-					}
-				}
-			}
-
-			.i-am {
-				font-size: 4rem;
-				opacity: 0.8;
-				margin: 2rem 0;
-				color: lavender;
-			}
-
-			.brief {
-				margin: 1rem 0;
-			}
-
-			.learn-more {
-				margin-top: 1rem;
-			}
-		}
-
-		.about-me {
-			display: flex;
-			flex-direction: column;
-
-			.me {
-				margin: 1rem auto 0;
-				width: 250px;
-				height: 250px;
-				border-radius: 50%;
-				object-fit: cover;
-				box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px;
-			}
-		}
-
-		.projects {
-			.project {
-				height: 300px;
-				position: relative;
-				margin-bottom: 4rem;
-				display: flex;
-				align-items: center;
-
-				&.left {
-					.description {
-						text-align: right;
-						align-items: flex-end;
-					}
-				}
-
-				&.right {
-					.gatsby-image-wrapper {
-						right: 0;
-					}
-				}
-
-				&.mobile {
-					height: 400px;
-
-					.description {
-						text-align: center;
-						align-items: center;
-					}
-
-					.mobile-screen {
-						box-sizing: content-box;
-						border-radius: 14px;
-						border: 6px solid black;
-					}
-
-					.left {
-						position: absolute;
-						left: 10%;
-					}
-
-					.right {
-						position: absolute;
-						right: 10%;
-					}
-				}
-
-				.description {
-					display: flex;
-					flex-direction: column;
-
-					h3, a, p, h4 {
-						z-index: 3;
-					}
-	
-					h3 {
-						margin-bottom: 5px;
-						font-size: 2rem;
-	
-						a {
-							text-decoration: none;
-							color: mediumpurple;
-							padding: 6px 10px;
-							border-radius: 3px;
-							transition: 0.5s all;
-	
-							&:hover {
-								box-shadow: #9370d880 0px 0px 0px 3px;
-							}
-						}
-					}
-	
-					p {
-						width: 50%;
-						display: inline-block;
-						box-shadow: $shadow;
-						border-radius: 3px;
-						background-color: #393e46;
-						padding: 10px;
-					}
-
-					h4 {
-						width: 250px;
-						padding-right: 10px;
-						font-family: 'Fira Code', monospace;
-						font-weight: 300;
-					}
-				}
-
-				.gatsby-image-wrapper {
-					position: absolute;
-					top: 0;
-					z-index: 0;
-					height: 100%;
-					box-shadow: $shadow;
-				}
-
-				// img {
-				// 	position: absolute;
-				// 	top: 0;
-				// 	z-index: 0;
-				// 	width: 60%;
-				// 	box-shadow: $shadow;
-				// 	border-radius: 3px;
-				// }
 			}
 		}
 	}
