@@ -26,11 +26,6 @@ const Layout = ({ children, className }) => {
               About
             </Link>
           </li>
-          <li className="nav-link-item">
-            <Link to="/projects" className="nav-link-text">
-              Projects
-            </Link>
-          </li>
 					<li className="nav-link-item">
             <Link to="/blog" className="nav-link-text">
               Blog
@@ -57,7 +52,7 @@ const Layout = ({ children, className }) => {
 				<ul>
 					<li>
 						<a 
-              href="" 
+              // href="" 
               onClick={() => window.open('mailto:edwardtdo@gmail.com?subject=Hello Edward!&body=What would you like to say?')}
             >
 							edwardtdo@gmail.com

@@ -82,13 +82,41 @@ const IndexPage = () => {
                 An in browser markdown note-taking web app with code block syntax highlighting, a file system, and tab management. Currently a frontend demo. Heavily inspired by Obsidian.
               </p>
               <h4>
-                TypeScript, React, Redux, SASS, MaterialUI
+                TypeScript, React, Redux, SCSS, MaterialUI
               </h4>
             </div>
             <StaticImage 
-              alt="A screenshot if wizzy-wig, a note-taking web app using markdown"
+              alt="A screenshot of wizzy-wig, a note-taking web app using markdown"
               src="../images/wizzy-wig.png"
               height={300}
+            />
+          </div>
+
+          <div className="project mobile">
+            <div className="description">
+              <h3>
+                <a href="https://tonguist.netlify.app/">
+                  tonguist
+                </a>
+              </h3>
+              <p>
+                A flashcards web-app centered around language learning that dynamically tracks daily and weekly progress through intuitive visual cues. Best viewed on mobile.
+              </p>
+              <h4>
+                React, Node, Express, MongoDB, SCSS, MaterialUI
+              </h4>
+            </div>
+            <StaticImage 
+              alt="A screenshot of tonguist's dashboard"
+              src="../images/tonguist-dash.png"
+              height={400}
+              className="left mobile-screen"
+            />
+            <StaticImage 
+              alt="A screenshot of tonguist's flashcard"
+              src="../images/tonguist-card.jpg"
+              height={400}
+              className="right mobile-screen"
             />
           </div>
 
@@ -103,12 +131,33 @@ const IndexPage = () => {
                 A collection of highly interactive brain trainer games made straight out of DOM elements and state management.
               </p>
               <h4>
-                TypeScript, React, Redux, SASS, MaterialUI
+                React, Firebase, Bootstrap, SCSS
               </h4>
             </div>
             <StaticImage 
-              alt="A screenshot if brain-train, a web-app for interactive brain-training games"
+              alt="A screenshot of brain-train, a web-app for interactive brain-training games"
               src="../images/brain-train.png"
+              height={300}
+            />
+          </div>
+
+          <div className="project left">
+            <div className="description">
+              <h3>
+                <a href="https://ana-anecdotal.netlify.app/">
+                  ana
+                </a>
+              </h3>
+              <p>
+                A forum board built with Ruby on Rails that deals with complex database associations. Don't forget to post, comment, follow, and like.
+              </p>
+              <h4>
+                Ruby on Rails
+              </h4>
+            </div>
+            <StaticImage 
+              alt="A screenshot of ana, a forum board"
+              src="../images/ana.png"
               height={300}
             />
           </div>
