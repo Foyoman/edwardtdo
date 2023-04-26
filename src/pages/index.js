@@ -5,8 +5,10 @@ import Seo from '../components/seo'
 import './home.scss';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import Button from '../components/button/button';
-import { SiJavascript, SiTypescript, SiRubyonrails, SiFirebase, SiMongodb } from 'react-icons/si';
-import { DiRubyRough, DiSass, DiCss3, DiReact, DiJqueryLogo, DiNodejsSmall, DiPostgresql, DiMysql } from 'react-icons/di';
+import { SiJavascript, SiTypescript, SiRubyonrails, SiFirebase, SiMongodb, SiExpress, SiNextdotjs, SiNuxtdotjs, SiBitbucket } from 'react-icons/si';
+import { DiRubyRough, DiSass, DiPython, DiCss3, DiReact, DiJqueryLogo, DiNodejsSmall, DiPostgresql, DiMysql } from 'react-icons/di';
+import { RiVuejsFill } from 'react-icons/ri';
+import { AiFillGithub } from 'react-icons/ai';
 
 const IndexPage = () => {
   const [expand, setExpand] = useState(false);
@@ -21,7 +23,7 @@ const IndexPage = () => {
       <div className="body">
 
         <div className="intro section">
-          <p className="hello">Hi, I'm</p>
+          <p className="hello">Hi, my name is</p>
           <div className="site-title">
             <div className="title">
               <div className="tag">
@@ -217,7 +219,7 @@ const IndexPage = () => {
               </p>
               { selectedTab === "leap" ? 
               <p>
-                Tech: JavaScript/TypeScript, Vue/Nuxt, Storybook, Storyblok
+                Tech: JavaScript/TypeScript, Vue/Nuxt, Storybook, Storyblok, NPM, SASS
               </p>
               : 
               null
@@ -235,9 +237,104 @@ const IndexPage = () => {
             />
             }
           </div>
-          <div className="tech">
-            <SiJavascript />
+          <div className="tech-stack">
+            <h2>Tech Stack</h2>
+            <h3>Languages</h3>
+            <div className="tech-list">
+              <div className="tech">
+                <SiJavascript className="icon" />
+                <p>JavaScript</p>
+              </div>
+              <div className="tech">
+                <SiTypescript className="icon" />
+                <p>TypeScript</p>
+              </div>
+              <div className="tech">
+                <DiRubyRough className="icon" />
+                <p>Ruby</p>
+              </div>
+              <div className="tech">
+                <DiPython className="icon" />
+                <p>Python</p>
+              </div>
+              <div className="tech">
+                <DiSass className="icon" />
+                <p>SASS</p>
+              </div>
+            </div>
+            <h3>Frameworks / Libraries</h3>
+            <div className="tech-list">
+              <div className="tech">
+                <DiReact className="icon" />
+                <p>React</p>
+              </div>
+              <div className="tech">
+                <SiNextdotjs className="icon" />
+                <p>Next</p>
+              </div>
+              <div className="tech">
+                <RiVuejsFill className="icon" />
+                <p>Vue</p>
+              </div>
+              <div className="tech">
+                <SiNuxtdotjs className="icon" />
+                <p>Nuxt</p>
+              </div>
+              <div className="tech">
+                <SiRubyonrails className="icon" />
+                <p>Rails</p>
+              </div>
+              <div className="tech">
+                <DiNodejsSmall className="icon" />
+                <p>Node</p>
+              </div>
+              <div className="tech">
+                <SiExpress className="icon" />
+                <p>Express</p>
+              </div>
+              <div className="tech">
+                <DiJqueryLogo className="icon" />
+                <p>jQuery</p>
+              </div>
+            </div>
+            <h3>Databases / Cloud</h3>
+            <div className="tech-list">
+              <div className="tech">
+                <DiPostgresql className="icon" />
+                <p>PostgreSQL</p>
+              </div>
+              <div className="tech">
+                <DiMysql className="icon" />
+                <p>MySQL</p>
+              </div>
+              <div className="tech">
+                <SiMongodb className="icon" />
+                <p>MongoDB</p>
+              </div>
+              <div className="tech">
+                <SiFirebase className="icon" />
+                <p>Firebase</p>
+              </div>
+              <div className="tech">
+                <AiFillGithub className="icon" />
+                <p>GitHub</p>
+              </div>
+              <div className="tech">
+                <SiBitbucket className="icon" />
+                <p>BitBucket</p>
+              </div>
+            </div>
           </div>
+        </div>
+
+        <div className="contact section">
+          <h3>04. What's next?</h3>
+          <h2>Get In Touch</h2>
+          <p>
+            I'm currently open to new opportunities. My inbox is always open, even just for a chat!
+          </p>
+          <Button label="Say Hello!" />
+          <h4>Designed & Built by Edward Do</h4>
         </div>
       </div>
     </Layout>
