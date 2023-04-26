@@ -23,7 +23,7 @@ const IndexPage = () => {
       <div className="body">
 
         <div className="intro section">
-          <p className="hello">Hi, my name is</p>
+          <p className="hello">Hi, I'm</p>
           <div className="site-title">
             <div className="title">
               <div className="tag">

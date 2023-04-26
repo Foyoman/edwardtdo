@@ -3,6 +3,7 @@ import { Link } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import Button from '../button/button';
 import './layout.scss'
 
 const Layout = ({ children, className }) => {
@@ -25,6 +26,9 @@ const Layout = ({ children, className }) => {
             <Link to="/blog" className="nav-link-text">
               Blog
             </Link>
+          </li>
+          <li>
+            <Button label="Resume" />
           </li>
         </ul>
       </nav>

@@ -58,7 +58,12 @@ a {
 		.nav-links {
 			z-index: 3;
 			display: flex;
+			align-items: center;
 			list-style: none;
+
+			button {
+				padding: 8px 12px;
+			}
 			
 			.nav-link-item {
 				padding-right: 2rem;
