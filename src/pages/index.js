@@ -5,6 +5,8 @@ import Seo from '../components/seo'
 import './home.scss';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import Button from '../components/button/button';
+import { SiJavascript, SiTypescript, SiRubyonrails, SiFirebase, SiMongodb } from 'react-icons/si';
+import { DiRubyRough, DiSass, DiCss3, DiReact, DiJqueryLogo, DiNodejsSmall, DiPostgresql, DiMysql } from 'react-icons/di';
 
 const IndexPage = () => {
   const [expand, setExpand] = useState(false);
@@ -199,7 +201,13 @@ const IndexPage = () => {
                 "Software Engineering Immersive"
               }
               </h3>
-              <p>Jun 2022 - Sep 2023</p>
+              <p>
+              { selectedTab === "leap" ? 
+                "Nov 2022 - Mar 2023"
+                : 
+                "Jun 2022 - Sep 2022"
+              }
+              </p>
               <p>
               { selectedTab === "leap" ? 
                 "A developer for the global marketing team, responsible for the development of sites under all global domains. We employed a strong focus on component reusability, using isolated components driven development through the development of our UI component library based on our design system, and having everything linked to a headless CMS for easy access to our designers."
@@ -207,6 +215,13 @@ const IndexPage = () => {
                 "Accumulating possibly over 600 hours of coding over 12 weeks, this coding bootcamp provided the intense and immersive environment needed for me to maximise the potential of my deep dive into the world of programming. We went through full-stack development, learning the most used and modern frameworks, and were taught the best coding principles and patterns to follow to become good developers in any field of programming."
               }
               </p>
+              { selectedTab === "leap" ? 
+              <p>
+                Tech: JavaScript/TypeScript, Vue/Nuxt, Storybook, Storyblok
+              </p>
+              : 
+              null
+              }
             </div>
             { selectedTab === "leap" ? 
             <StaticImage 
@@ -219,6 +234,9 @@ const IndexPage = () => {
               className="logo"
             />
             }
+          </div>
+          <div className="tech">
+            <SiJavascript />
           </div>
         </div>
       </div>

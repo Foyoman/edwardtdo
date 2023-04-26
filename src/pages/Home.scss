@@ -145,11 +145,19 @@ $shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(
 							text-align: right;
 							align-items: flex-end;
 						}
+
+						h4 {
+							padding-right: 10px;
+						}
 					}
 	
 					&.right {
 						.gatsby-image-wrapper {
 							right: 0;
+						}
+
+						h4 {
+							padding-left: 10px;
 						}
 					}
 	
@@ -163,7 +171,7 @@ $shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(
 	
 						.mobile-screen {
 							box-sizing: content-box;
-							border-radius: 14px;
+							border-radius: 24px;
 							border: 6px solid black;
 						}
 	
@@ -214,7 +222,6 @@ $shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(
 	
 						h4 {
 							width: 250px;
-							padding-right: 10px;
 							font-family: 'Fira Code', monospace;
 							font-weight: 300;
 						}
