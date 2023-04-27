@@ -1,36 +1,71 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { Link, navigate } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import Button from '../button/button';
 import './layout.scss'
 
-const Layout = ({ children, className }) => {
+const Layout = ({ children, className, homeNav, handleScroll }) => {
+  const handleDonut = () => {
+    if (homeNav && handleScroll) {
+      handleScroll("intro");
+    } else {
+      navigate("/");
+    }
+  }
+
   return (
     <div className={`page ${className}`}>
       <nav>
-        <StaticImage
-          alt="A picture of Donut, a handsome beagle baby boy"
-          src="../../images/donut.jpg"
-          height={40}
-          className="donut"
-        />
-        <ul className="nav-links">
-          <li className="nav-link-item">
-            <Link to="/" className="nav-link-text">
-              Home
-            </Link>
-          </li>
-					<li className="nav-link-item">
-            <Link to="/blog" className="nav-link-text">
-              Blog
-            </Link>
-          </li>
-          <li>
-            <Button label="Resume" />
-          </li>
-        </ul>
+        <div
+          onClick={handleDonut}
+          className="donut-container"
+        >
+          <StaticImage
+            alt="A picture of Donut, a handsome beagle baby boy"
+            src="../../images/donut.jpg"
+            height={40}
+            className="donut"
+          />
+        </div>
+        <div className="rightside-nav">
+          { homeNav && 
+          <div className="section-nav">
+            <p onClick={() => handleScroll("about")}>
+              <span>01.</span>
+              About
+            </p>
+            <p onClick={() => handleScroll("projects")}>
+              <span>02.</span>
+              Projects
+            </p>
+            <p onClick={() => handleScroll("experience")}>
+              <span>03.</span>
+              Experience
+            </p>
+            <p onClick={() => handleScroll("contact")}>
+              <span>04.</span>
+              Contact
+            </p>
+          </div>
+          }
+          <ul className="nav-links">
+            <li className="nav-link-item">
+              <Link to="/" className="nav-link-text">
+                Home
+              </Link>
+            </li>
+            <li className="nav-link-item">
+              <Link to="/blog" className="nav-link-text">
+                Blog
+              </Link>
+            </li>
+            <li>
+              <Button label="Resume" />
+            </li>
+          </ul>
+        </div>
       </nav>
       <div className="left-overlay overlay">
 				<ul>

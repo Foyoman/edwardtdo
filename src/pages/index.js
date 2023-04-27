@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import Layout from '../components/layout/layout'
 import { StaticImage } from 'gatsby-plugin-image'
 import Seo from '../components/seo'
@@ -12,17 +12,39 @@ import { AiFillGithub } from 'react-icons/ai';
 
 const IndexPage = () => {
   const [expand, setExpand] = useState(false);
-  const [selectedTab, setSelectedTab] = useState("leap")
+  const [selectedTab, setSelectedTab] = useState("leap");
+  
+  const introRef = useRef(null);
+  const aboutRef = useRef(null);
+  const projectsRef = useRef(null);
+  const experienceRef = useRef(null);
+  const contactRef = useRef(null);
 
   const handleClick = (e) => {
     setExpand(!expand);
   }
 
+  const handleScroll = (ref) => {
+    let el;
+    if (ref === "intro") el = introRef;
+    if (ref === "about") el = aboutRef;
+    if (ref === "projects") el = projectsRef;
+    if (ref === "experience") el = experienceRef;
+    if (ref === "contact") el = contactRef;
+
+    el.current?.scrollIntoView({ behavior: 'smooth', margin: '100px' });
+  }
+
   return (
-    <Layout pageTitle="home" className="home-page">
+    <Layout 
+      pageTitle="home" 
+      className="home-page" 
+      homeNav={true} 
+      handleScroll={handleScroll}
+    >
       <div className="body">
 
-        <div className="intro section">
+        <div className="intro section" ref={introRef}>
           <p className="hello">Hi, I'm</p>
           <div className="site-title">
             <div className="title">
@@ -43,10 +65,14 @@ const IndexPage = () => {
           <p className="brief">
             I'm a passion driven full-stack software engineer, with a knack for problem-solving, a keen eye for developing intuitive user experiences, and an eagerness for feature-building.
           </p>
-          <Button label="Learn more about me" className="learn-more" />
+          <Button 
+            label="Learn more about me" 
+            className="learn-more" 
+            onClick={() => handleScroll("about")}
+          />
         </div>
 
-        <div className="about-me section">
+        <div className="about-me section" ref={aboutRef}>
           <h2 className="heading">
             <span>01.</span>
             About Me
@@ -71,7 +97,7 @@ const IndexPage = () => {
           />
         </div>
 
-        <div className="projects section">
+        <div className="projects section" ref={projectsRef}>
           <h2 className="heading">
             <span>02.</span>
             A few of my creations
@@ -79,7 +105,7 @@ const IndexPage = () => {
           <div className="project left">
             <div className="description">
               <h3>
-                <a href="https://wizzy-wig.netlify.app/">
+                <a target="_blank" href="https://wizzy-wig.netlify.app/">
                   wizzy-wig
                 </a>
               </h3>
@@ -100,7 +126,7 @@ const IndexPage = () => {
           <div className="project mobile">
             <div className="description">
               <h3>
-                <a href="https://tonguist.netlify.app/">
+                <a target="_blank" href="https://tonguist.netlify.app/">
                   tonguist
                 </a>
               </h3>
@@ -128,7 +154,7 @@ const IndexPage = () => {
           <div className="project right">
             <div className="description">
               <h3>
-                <a href="https://the-brain-train.web.app/">
+                <a target="_blank" href="https://the-brain-train.web.app/">
                   Brain Train
                 </a>
               </h3>
@@ -149,7 +175,7 @@ const IndexPage = () => {
           <div className="project left">
             <div className="description">
               <h3>
-                <a href="https://ana-anecdotal.netlify.app/">
+                <a target="_blank" href="https://ana-anecdotal.netlify.app/">
                   ana
                 </a>
               </h3>
@@ -168,7 +194,7 @@ const IndexPage = () => {
           </div>
         </div>
 
-        <div className="experience section">
+        <div className="experience section" ref={experienceRef}>
           <h2 className="heading">
             <span>03.</span>
             Relevant Experience
@@ -227,11 +253,13 @@ const IndexPage = () => {
             </div>
             { selectedTab === "leap" ? 
             <StaticImage 
+              alt="LEAP Legal Software logo"
               src="../images/leap.jpeg"
               className="logo"
             />
             : 
             <StaticImage 
+              alt="General Assembly logo"
               src="../images/general-assembly.webp"
               className="logo"
             />
@@ -327,7 +355,7 @@ const IndexPage = () => {
           </div>
         </div>
 
-        <div className="contact section">
+        <div className="contact section" ref={contactRef}>
           <h3>04. What's next?</h3>
           <h2>Get In Touch</h2>
           <p>
@@ -336,6 +364,7 @@ const IndexPage = () => {
           <Button label="Say Hello!" />
           <h4>Designed & Built by Edward Do</h4>
         </div>
+
       </div>
     </Layout>
   )

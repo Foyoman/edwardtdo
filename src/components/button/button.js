@@ -1,10 +1,9 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import './button.scss'
 
-const Button = ({ label, className }) => {
+const Button = ({ label, className, onClick }) => {
 	return (
-		<button className={className}>
+		<button className={className} onClick={onClick}>
 			{ label }
 		</button>
 	)
