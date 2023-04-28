@@ -1,9 +1,10 @@
-import React from 'react'
-import { Link, navigate } from 'gatsby'
-import { StaticImage } from 'gatsby-plugin-image'
+import React from 'react';
+import { Link, navigate } from 'gatsby';
+import { StaticImage } from 'gatsby-plugin-image';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import Button from '../button/button';
+import resume from '../../assets/Edward Do, Software Dev.pdf';
 import './layout.scss'
 
 const Layout = ({ children, className, homeNav, handleScroll }) => {
@@ -13,6 +14,10 @@ const Layout = ({ children, className, homeNav, handleScroll }) => {
     } else {
       navigate("/");
     }
+  }
+
+  const openResume = () => {
+    window.open(resume, "_blank");
   }
 
   return (
@@ -62,7 +67,7 @@ const Layout = ({ children, className, homeNav, handleScroll }) => {
               </Link>
             </li>
             <li>
-              <Button label="Resume" />
+              <Button label="Resume" onClick={openResume} />
             </li>
           </ul>
         </div>
