@@ -40,6 +40,10 @@ a {
 		margin: auto;
 	}
 
+	main {
+		padding-top: 103px;
+	}
+
 	nav {
 		@include gloss;
 		display: flex;
@@ -198,9 +202,5 @@ a {
 				}
 			}
 		}
-	}
-
-	main {
-		padding-top: 103px;
 	}
 }

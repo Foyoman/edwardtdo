@@ -361,7 +361,10 @@ const IndexPage = () => {
           <p>
             I'm currently open to new opportunities. My inbox is always open, even just for a chat!
           </p>
-          <Button label="Say Hello!" />
+          <Button 
+            label="Say Hello!" 
+            onClick={() => window.open('mailto:edwardtdo@gmail.com?subject=Hello Edward!&body=What would you like to say?')}
+          />
           <h4>Designed & Built by Edward Do</h4>
         </div>
 
