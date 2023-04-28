@@ -35,7 +35,7 @@ const Layout = ({ children, className, homeNav, handleScroll }) => {
           />
         </div>
         <div className="rightside-nav">
-          { homeNav && 
+          { homeNav && handleScroll &&
           <div className="section-nav">
             <p onClick={() => handleScroll("about")}>
               <span>01.</span>
