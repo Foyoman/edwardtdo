@@ -40,22 +40,24 @@ const Layout = ({ children, className, homeNav, handleScroll }) => {
   return (
     <div className={`page ${className}`}>
       <nav>
-        <div
-          onClick={handleDonut}
-          className="donut-container"
-        >
-          <StaticImage
-            alt="A picture of Donut, a handsome beagle baby boy"
-            src="../../images/donut.jpg"
-            height={40}
-            className="donut"
-          />
+        <div className="gloss">
+          <div
+            onClick={handleDonut}
+            className="donut-container"
+          >
+            <StaticImage
+              alt="A picture of Donut, a handsome beagle baby boy"
+              src="../../images/donut.jpg"
+              height={40}
+              className="donut"
+            />
+          </div>
+          <a className='mobile-only burger-menu' href="#" id="burger-menu" onClick={ updateMenu }>
+            <span className={ burgerClass }></span>
+            <span className={ burgerClass }></span>
+            <span className={ burgerClass }></span>
+          </a>
         </div>
-        <a className='mobile-only burger-menu' href="#" id="burger-menu" onClick={ updateMenu }>
-          <span className={ burgerClass }></span>
-          <span className={ burgerClass }></span>
-          <span className={ burgerClass }></span>
-        </a>
         <div className={`rightside-nav ${ menuClass }`}>
           { homeNav && handleScroll &&
           <div className="section-nav">

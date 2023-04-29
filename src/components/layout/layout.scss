@@ -57,21 +57,23 @@ a {
 		width: 100%;
 		padding: 30px;
 
-		.donut-container {
-			.donut {
-				border-radius: 50%;
-				cursor: pointer;
-				transition: all 0.2s;
-				border-style: inset;
-	
-				&:hover {
-					border-color: mediumpurple;
+		.gloss {
+			.donut-container {
+				.donut {
+					border-radius: 50%;
+					cursor: pointer;
+					transition: all 0.2s;
+					border-style: inset;
+		
+					&:hover {
+						border-color: mediumpurple;
+					}
 				}
 			}
-		}
-
-		#burger-menu {
-			display: none;
+	
+			#burger-menu {
+				display: none;
+			}
 		}
 
 		.rightside-nav {
@@ -212,82 +214,99 @@ a {
 
 	@media only screen and (max-width: 768px) {
 		nav {
-			padding: 20px;
+			backdrop-filter: none;
+			padding: 0;
 
-			#burger-menu {
-				height: 20px;
-				width: 30px;
+			.gloss {
+				@include gloss;
+				background: $purple-glass;
+				padding: 20px;
+				width: 100%;
 				display: flex;
-				flex-direction: column;
-				align-items: flex-start;
+				align-items: center;
 				justify-content: space-between;
-				cursor: pointer;
 
-				.burger-bar {
-					width: 100%;
-					height: 3px;
-					background-color: $white;
-					border-radius: 0.5em;
-
-					&.unclicked {
-						transform: rotate(0) translate(0);
-						transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.2s;
-					}
-
-					&.clicked {
-						&:nth-child(1) {
-							transform: rotate(45deg) translate(6px, 6px);
-							transition: ease-out 0.2s;
+				#burger-menu {
+					height: 20px;
+					width: 30px;
+					display: flex;
+					flex-direction: column;
+					align-items: flex-start;
+					justify-content: space-between;
+					cursor: pointer;
+	
+					.burger-bar {
+						width: 100%;
+						height: 3px;
+						background-color: $white;
+						border-radius: 0.5em;
+	
+						&.unclicked {
+							transform: rotate(0) translate(0);
+							transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.2s;
 						}
-
-						&:nth-child(2) {
-							transform: scale(0);
-							transition: ease-out 0.2s;
-						}
-
-						&:nth-child(3) {
-							transform: rotate(135deg) translate(-6px, 6px);
-							transition: ease-out 0.2s;
+	
+						&.clicked {
+							&:nth-child(1) {
+								transform: rotate(45deg) translate(6px, 6px);
+								transition: ease-out 0.2s;
+							}
+	
+							&:nth-child(2) {
+								transform: scale(0);
+								transition: ease-out 0.2s;
+							}
+	
+							&:nth-child(3) {
+								transform: rotate(135deg) translate(-6px, 6px);
+								transition: ease-out 0.2s;
+							}
 						}
 					}
 				}
 			}
 
 			.rightside-nav {
+				@include gloss;
+				background: $purple-glass;
 				align-items: flex-end;
+				flex-direction: column-reverse;
+				position: fixed;
+				top: 83px;
+				right: 0;
+				text-align: right;
+				padding: 1rem 1.5rem;
+
+				.section-nav {
+					flex-direction: column;
+					border: none;
+					gap: 1rem;
+
+					p {
+						margin: 0;
+					}
+				}
+
+				.nav-links {
+					width: 100%;
+					flex-direction: column;
+					align-items: flex-end;
+					gap: 1rem;
+					margin: 0 0 1rem 0;
+					padding-bottom: 1rem;
+					border-bottom: 1px solid $white;
+					
+					.nav-link-item {
+						padding: 0;
+					}
+				}
 
 				&.hidden {
 					display: none;
 				}
 
 				&.visible {
-					@include gloss;
-					background: $purple-glass;
 					display: flex;
-					flex-direction: column-reverse;
-					position: fixed;
-					top: 83px;
-					right: 0;
-					text-align: right;
-
-					.section-nav {
-						flex-direction: column;
-						border: none;
-
-						p {
-							margin: 0;
-						}
-					}
-				}
-
-				.nav-links {
-					flex-direction: column;
-					align-items: flex-end;
-					margin: 0;
-
-					.nav-link-item {
-						padding: 0;
-					}
 				}
 			}
 		}
