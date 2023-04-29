@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, navigate } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 import GitHubIcon from '@mui/icons-material/GitHub';
@@ -8,6 +8,23 @@ import resume from '../../assets/Edward Do, Software Dev.pdf';
 import './layout.scss'
 
 const Layout = ({ children, className, homeNav, handleScroll }) => {
+  const [burgerClass, setBurgerClass] = useState("burger-bar unclicked");
+  const [menuClass, setMenuClass] = useState("menu hidden");
+  const [menuClicked, setMenuClicked] = useState(false);
+
+  const updateMenu = (e) => {
+    e.preventDefault();
+    
+    if (!menuClicked) {
+      setBurgerClass("burger-bar clicked");
+      setMenuClass("menu visible");
+    } else {
+      setBurgerClass("burger-bar unclicked");
+      setMenuClass("menu hidden");
+    }
+    setMenuClicked(!menuClicked);
+  }
+
   const handleDonut = () => {
     if (homeNav && handleScroll) {
       handleScroll("intro");
@@ -34,7 +51,12 @@ const Layout = ({ children, className, homeNav, handleScroll }) => {
             className="donut"
           />
         </div>
-        <div className="rightside-nav">
+        <a className='mobile-only burger-menu' href="#" id="burger-menu" onClick={ updateMenu }>
+          <span className={ burgerClass }></span>
+          <span className={ burgerClass }></span>
+          <span className={ burgerClass }></span>
+        </a>
+        <div className={`rightside-nav ${ menuClass }`}>
           { homeNav && handleScroll &&
           <div className="section-nav">
             <p onClick={() => handleScroll("about")}>

@@ -3,18 +3,19 @@
 $white-glass: rgba(255, 255, 255, 0.3);
 $white-glass-hover: rgba(255, 255, 255, 0.1);
 $black-glass: rgba(0, 0, 0, 0.4);
+$purple-glass: rgba(71, 57, 81, 0.38);
+$white: rgb(221, 218, 214);
 
 @mixin gloss {
 	-webkit-backdrop-filter: blur(10px);
 	backdrop-filter: blur(10px);
-	background: rgba(71, 57, 81, 0.38);
 }
 
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	color: rgb(221, 218, 214);
+	color: $white;
 }
 
 html,
@@ -46,6 +47,7 @@ a {
 
 	nav {
 		@include gloss;
+		background: $purple-glass;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -66,6 +68,10 @@ a {
 					border-color: mediumpurple;
 				}
 			}
+		}
+
+		#burger-menu {
+			display: none;
 		}
 
 		.rightside-nav {
@@ -109,7 +115,7 @@ a {
 					padding-right: 2rem;
 					
 					.nav-link-text {
-						color: rgb(221, 218, 214);
+						color: $white;
 						// color: black;
 						text-decoration: none;
 						transition: all 0.2s;
@@ -198,6 +204,89 @@ a {
 
 					&:hover {
 						opacity: 0.9;
+					}
+				}
+			}
+		}
+	}
+
+	@media only screen and (max-width: 768px) {
+		nav {
+			padding: 20px;
+
+			#burger-menu {
+				height: 20px;
+				width: 30px;
+				display: flex;
+				flex-direction: column;
+				align-items: flex-start;
+				justify-content: space-between;
+				cursor: pointer;
+
+				.burger-bar {
+					width: 100%;
+					height: 3px;
+					background-color: $white;
+					border-radius: 0.5em;
+
+					&.unclicked {
+						transform: rotate(0) translate(0);
+						transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.2s;
+					}
+
+					&.clicked {
+						&:nth-child(1) {
+							transform: rotate(45deg) translate(6px, 6px);
+							transition: ease-out 0.2s;
+						}
+
+						&:nth-child(2) {
+							transform: scale(0);
+							transition: ease-out 0.2s;
+						}
+
+						&:nth-child(3) {
+							transform: rotate(135deg) translate(-6px, 6px);
+							transition: ease-out 0.2s;
+						}
+					}
+				}
+			}
+
+			.rightside-nav {
+				align-items: flex-end;
+
+				&.hidden {
+					display: none;
+				}
+
+				&.visible {
+					@include gloss;
+					background: $purple-glass;
+					display: flex;
+					flex-direction: column-reverse;
+					position: fixed;
+					top: 83px;
+					right: 0;
+					text-align: right;
+
+					.section-nav {
+						flex-direction: column;
+						border: none;
+
+						p {
+							margin: 0;
+						}
+					}
+				}
+
+				.nav-links {
+					flex-direction: column;
+					align-items: flex-end;
+					margin: 0;
+
+					.nav-link-item {
+						padding: 0;
 					}
 				}
 			}
