@@ -4,7 +4,7 @@ $nav-padding: 103px;
 $nav-padding-mobile: 83px;
 $white-glass: rgba(255, 255, 255, 0.3);
 $white-glass-hover: rgba(255, 255, 255, 0.1);
-$black-glass: rgba(0, 0, 0, 0.4);
+$black-glass: rgba(0, 0, 0, 0.2);
 $purple-glass: rgba(71, 57, 81, 0.38);
 $white: rgb(221, 218, 214);
 
@@ -273,7 +273,9 @@ a {
 
 			.rightside-nav {
 				@include gloss;
-				background: $purple-glass;
+				margin: 0.5rem;
+				border-radius: 8px;
+				background: $black-glass;
 				align-items: flex-end;
 				flex-direction: column-reverse;
 				position: fixed;

@@ -37,6 +37,11 @@ const Layout = ({ children, className, homeNav, handleScroll }) => {
     window.open(resume, "_blank");
   }
 
+  const openEmail = (e) => {
+    e.preventDefault();
+    window.open('mailto:edwardtdo@gmail.com?subject=Hello Edward!&body=What would you like to say?');
+  }
+
   return (
     <div className={`page ${className}`}>
       <nav>
@@ -52,7 +57,12 @@ const Layout = ({ children, className, homeNav, handleScroll }) => {
               className="donut"
             />
           </div>
-          <a className='mobile-only burger-menu' href="#" id="burger-menu" onClick={ updateMenu }>
+          <a 
+            className='mobile-only burger-menu' 
+            href="#" 
+            id="burger-menu" 
+            onClick={ updateMenu }
+          >
             <span className={ burgerClass }></span>
             <span className={ burgerClass }></span>
             <span className={ burgerClass }></span>
@@ -99,7 +109,7 @@ const Layout = ({ children, className, homeNav, handleScroll }) => {
       <div className="left-overlay overlay">
         <a 
           href="#" 
-          onClick={() => window.open('mailto:edwardtdo@gmail.com?subject=Hello Edward!&body=What would you like to say?')}
+          onClick={openEmail}
           className="mobile"
         >
           edwardtdo@gmail.com
@@ -115,7 +125,7 @@ const Layout = ({ children, className, homeNav, handleScroll }) => {
       <div className="right-overlay overlay">
         <a 
           href="#" 
-          onClick={() => window.open('mailto:edwardtdo@gmail.com?subject=Hello Edward!&body=What would you like to say?')}
+          onClick={openEmail}
         >
           edwardtdo@gmail.com
         </a>
