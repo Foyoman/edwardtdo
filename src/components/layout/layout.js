@@ -97,31 +97,28 @@ const Layout = ({ children, className, homeNav, handleScroll }) => {
         </div>
       </nav>
       <div className="left-overlay overlay">
-				<ul>
-					<li>
-						<a target="_" href="https://github.com/Foyoman">
-							<GitHubIcon className="icon" />
-						</a>
-					</li>
-					<li>
-						<a target="_" href="https://www.linkedin.com/in/edwardtdo/">
-							<LinkedInIcon className="icon" />
-						</a>
-					</li>
-				</ul>
+        <a 
+          href="#" 
+          onClick={() => window.open('mailto:edwardtdo@gmail.com?subject=Hello Edward!&body=What would you like to say?')}
+          className="mobile"
+        >
+          edwardtdo@gmail.com
+        </a>
+        <a target="_" href="https://github.com/Foyoman">
+          <GitHubIcon className="icon" />
+        </a>
+        <a target="_" href="https://www.linkedin.com/in/edwardtdo/">
+          <LinkedInIcon className="icon" />
+        </a>
 				<div className="left-stem stem" />
 			</div>
       <div className="right-overlay overlay">
-				<ul>
-					<li>
-						<a 
-              // href="" 
-              onClick={() => window.open('mailto:edwardtdo@gmail.com?subject=Hello Edward!&body=What would you like to say?')}
-            >
-							edwardtdo@gmail.com
-						</a>
-					</li>
-				</ul>
+        <a 
+          href="#" 
+          onClick={() => window.open('mailto:edwardtdo@gmail.com?subject=Hello Edward!&body=What would you like to say?')}
+        >
+          edwardtdo@gmail.com
+        </a>
 				<div className="right-stem stem" />
 			</div>
       <main className="container">

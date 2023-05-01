@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
 
+$nav-padding: 103px;
+$nav-padding-mobile: 83px;
 $white-glass: rgba(255, 255, 255, 0.3);
 $white-glass-hover: rgba(255, 255, 255, 0.1);
 $black-glass: rgba(0, 0, 0, 0.4);
@@ -42,7 +44,7 @@ a {
 	}
 
 	main {
-		padding-top: 103px;
+		padding-top: $nav-padding;
 	}
 
 	nav {
@@ -140,42 +142,42 @@ a {
 			border-left: 2px solid #9370d880;
 			height: 120px;
 		}
-
-		ul {
-			list-style: none;
-			padding-left: 0;
-
-			li {
-				display: block;
-
-				a {
-					text-decoration: none;
-					cursor: pointer;
-					color: mediumpurple;
-					max-width: 40px;
-					transition: all 0.2s;
-					font-family: 'Fira Code', monospace;
-	
-					&:hover {
-						color: #eeeeee;
-					}
-
-					.icon > path {
-						color: mediumpurple;
-					}
-				}
-			}
-		}
 	}
 
 	.left-overlay {
+		display: flex;
+		flex-direction: column;
 		margin-left: 40px;
 
 		.left-stem {
 			margin-left: 12px;
 		}
 
+		a {
+			text-decoration: none;
+			cursor: pointer;
+			color: mediumpurple;
+			max-width: 40px;
+			font-family: 'Fira Code', monospace;
+			margin-bottom: 0.5rem;
+			
+			.icon > path {
+				color: mediumpurple;
+				transition: all 0.2s;
+			}
+
+			&:hover {
+				.icon > path {
+					color: #eeeeee;
+				}
+			}
+		}
+		
 		ul {
+			.mobile {
+				display: none;
+			}
+
 			li {
 				&:nth-child(2) {
 					padding: 10px 0;
@@ -197,22 +199,25 @@ a {
 			margin-left: 10px;
 		}
 
-		ul {
-			li {
-				a {
-					display: block;
-					padding-bottom: 10px;
-					writing-mode: vertical-rl;
+		a {
+			text-decoration: none;
+			font-family: 'Fira Code', monospace;
+			display: block;
+			padding-bottom: 1rem;
+			writing-mode: vertical-rl;
 
-					&:hover {
-						opacity: 0.9;
-					}
-				}
+			&:hover {
+				opacity: 0.6;
+				color: #eeeeee;
 			}
 		}
 	}
 
 	@media only screen and (max-width: 768px) {
+		main {
+			padding-top: $nav-padding-mobile;
+		}
+
 		nav {
 			backdrop-filter: none;
 			padding: 0;
@@ -309,6 +314,27 @@ a {
 					display: flex;
 				}
 			}
+		}
+	}
+
+	@media only screen and (max-width: 425px) {
+		.left-overlay {
+			margin-left: 0.5rem;
+
+			.mobile {
+				display: block;
+				padding-bottom: 1rem;
+				margin:	0;
+				writing-mode: vertical-rl;
+
+				&:hover {
+					opacity: 0.9;
+				}
+			}
+		}
+
+		.right-overlay {
+			display: none;
 		}
 	}
 }

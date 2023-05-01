@@ -1,3 +1,5 @@
+$nav-padding: 103px;
+$nav-padding-mobile: 83px;
 $white-glass: rgba(255, 255, 255, 0.3);
 $white-glass-hover: rgba(255, 255, 255, 0.1);
 $black-glass: rgba(0, 0, 0, 0.4);
@@ -12,11 +14,12 @@ $shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(
 .home-page {
 	.body {
 		padding: 3rem 2rem;
+		overflow-x: hidden;
 
 		.section {
 			padding: 2rem 0 4rem;
-			min-height: calc(100vh - 103px - 3rem);
-			scroll-margin: 103px;
+			min-height: calc(100vh - $nav-padding - 3rem);
+			scroll-margin: $nav-padding;
 
 			.heading {
 				letter-spacing: 1.3px;
@@ -397,6 +400,38 @@ $shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(
 					width: 100%;
 					margin-bottom: 0;
 					margin-top: 30%;
+				}
+			}
+		}
+	}
+
+	@media only screen and (max-width: 768px) {
+		.body {
+			.section {
+				min-height: calc(100vh - $nav-padding-mobile - 3rem);
+			}
+		}
+	}
+
+	@media only screen and (max-width: 425px) {
+		.body {
+			.section {
+				padding: 1rem 1rem 3rem;
+
+				&.intro {
+					.site-title {
+						font-size: 2.5rem;
+
+						.props {
+							pre {
+								font-size: 1rem;
+							}
+						}
+					}
+
+					.i-am {
+						font-size: 2.5rem;
+					}
 				}
 			}
 		}
