@@ -5,7 +5,7 @@ import Seo from '../components/seo'
 import './home.scss';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import Button from '../components/button/button';
-import { SiJavascript, SiTypescript, SiRubyonrails, SiFirebase, SiMongodb, SiExpress, SiNextdotjs, SiNuxtdotjs, SiBitbucket } from 'react-icons/si';
+import { SiJavascript, SiTypescript, SiRubyonrails, SiFirebase, SiMongodb, SiExpress, SiNextdotjs, SiNuxtdotjs, SiBitbucket, SiTailwindcss, SiHtml5 } from 'react-icons/si';
 import { DiRubyRough, DiSass, DiPython, DiCss3, DiReact, DiJqueryLogo, DiNodejsSmall, DiPostgresql, DiMysql } from 'react-icons/di';
 import { RiVuejsFill } from 'react-icons/ri';
 import { AiFillGithub } from 'react-icons/ai';
@@ -289,6 +289,14 @@ const IndexPage = () => {
                 <DiSass className="icon" />
                 <p>SASS</p>
               </div>
+              <div className="tech">
+                <SiHtml5 className="icon" />
+                <p>HTML5</p>
+              </div>
+              <div className="tech">
+                <DiCss3 className="icon" />
+                <p>CSS3</p>
+              </div>
             </div>
             <h3>Frameworks / Libraries</h3>
             <div className="tech-list">
@@ -319,6 +327,10 @@ const IndexPage = () => {
               <div className="tech">
                 <SiExpress className="icon" />
                 <p>Express</p>
+              </div>
+              <div className="tech">
+                <SiTailwindcss className="icon" />
+                <p>Tailwind</p>
               </div>
               <div className="tech">
                 <DiJqueryLogo className="icon" />

@@ -149,6 +149,10 @@ a {
 		flex-direction: column;
 		margin-left: 40px;
 
+		.mobile {
+			display: none;
+		}
+
 		.left-stem {
 			margin-left: 12px;
 		}
