@@ -32,7 +32,7 @@ const IndexPage = () => {
     if (ref === "experience") el = experienceRef;
     if (ref === "contact") el = contactRef;
 
-    el.current?.scrollIntoView({ behavior: 'smooth', margin: '100px' });
+    el.current?.scrollIntoView({ behavior: 'smooth' });
   }
 
   return (
