@@ -5,7 +5,7 @@ import Seo from '../components/seo'
 import './home.scss';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import Button from '../components/button/button';
-import { SiJavascript, SiTypescript, SiRubyonrails, SiFirebase, SiMongodb, SiExpress, SiNextdotjs, SiNuxtdotjs, SiBitbucket, SiTailwindcss, SiHtml5 } from 'react-icons/si';
+import { SiJavascript, SiTypescript, SiRubyonrails, SiFirebase, SiMongodb, SiExpress, SiNextdotjs, SiNuxtdotjs, SiBitbucket, SiTailwindcss, SiHtml5, SiStorybook } from 'react-icons/si';
 import { DiRubyRough, DiSass, DiPython, DiCss3, DiReact, DiJqueryLogo, DiNodejsSmall, DiPostgresql, DiMysql } from 'react-icons/di';
 import { RiVuejsFill } from 'react-icons/ri';
 import { AiFillGithub } from 'react-icons/ai';
@@ -331,6 +331,10 @@ const IndexPage = () => {
               <div className="tech">
                 <SiTailwindcss className="icon" />
                 <p>Tailwind</p>
+              </div>
+              <div className="tech">
+                <SiStorybook className="icon" />
+                <p>Storybook</p>
               </div>
               <div className="tech">
                 <DiJqueryLogo className="icon" />
