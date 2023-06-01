@@ -78,16 +78,13 @@ const IndexPage = () => {
             About Me
           </h2>
           <p>
-            Hello! My name is Edward, and I have a passion for creating visions of highly interactive and functional web apps.
+            Hello! My name is Edward, and I have a passion for creating visions of highly interactive and functional applications. My interest in web/mobile development grew through my heavy usage of language learning apps such as Lingvist and Duolingo.
           </p>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum consequuntur ipsam ipsum culpa illo, quo eligendi, in soluta nobis corporis quam sit repellendus aliquid officiis molestiae vel, perferendis sequi reprehenderit?
+            At 18 years old, I uncovered a burning passion for travel and backpacking and since then I've always dreamt of finding a way to make this globally remote and mobile lifestyle sustainable. After several uni course changes and crises about what I was going to do for a living, I finally committed to following my natural touch and interest in technology and completed General Assembly's coding bootcamp in September 2022 and ended up uncovering a second life long passion in life.
           </p>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem ad facere officiis, fugit neque, commodi amet perspiciatis modi cupiditate dolorem voluptatibus animi accusamus quaerat est atque adipisci blanditiis fugiat veritatis.
-          </p>
-          <p>
-            I’m currently open to job opportunities so please feel free to email or connect with me via LinkedIn.
+            Now, I'm hoping to combine my 2 biggest passions in life as a fully remote developer. I’m currently open to job opportunities so please feel free to email or connect with me via LinkedIn.
           </p>
           <StaticImage
             alt="A picture of me, Edward, at Machu Picchu posing with a thumbs up"
