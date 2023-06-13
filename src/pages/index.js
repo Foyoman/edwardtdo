@@ -134,18 +134,20 @@ const IndexPage = () => {
                 React, Node, Express, MongoDB, SCSS, MaterialUI
               </h4>
             </div>
-            <StaticImage 
-              alt="A screenshot of tonguist's dashboard"
-              src="../images/tonguist-dash.png"
-              height={400}
-              className="left mobile-screen"
-            />
-            <StaticImage 
-              alt="A screenshot of tonguist's flashcard"
-              src="../images/tonguist-card.jpg"
-              height={400}
-              className="right mobile-screen"
-            />
+            <div className="screenshots">
+              <StaticImage 
+                alt="A screenshot of tonguist's dashboard"
+                src="../images/tonguist-dash.png"
+                height={400}
+                className="left mobile-screen"
+              />
+              <StaticImage 
+                alt="A screenshot of tonguist's flashcard"
+                src="../images/tonguist-card.jpg"
+                height={400}
+                className="right mobile-screen"
+              />
+            </div>
           </div>
 
           <div className="project right">

@@ -181,14 +181,16 @@ $shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(
 							border: 6px solid black;
 						}
 	
-						.left {
-							position: absolute;
-							left: 10%;
-						}
-	
-						.right {
-							position: absolute;
-							right: 10%;
+						.screenshots {
+							.left {
+								position: absolute;
+								left: 10%;
+							}
+		
+							.right {
+								position: absolute;
+								right: 10%;
+							}
 						}
 					}
 	
@@ -434,6 +436,50 @@ $shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(
 					.i-am {
 						font-size: 2rem;
 						margin: 1rem 0;
+					}
+				}
+
+				&.projects {
+					.project {
+						flex-direction: column;
+						margin-bottom: 2rem;
+
+						&.left, &.right, &.mobile {
+							height: auto;
+
+							.description {
+								align-items: center;
+								text-align: center;
+								margin-bottom: 1rem;
+
+								p {
+									width: 100%;
+								}
+
+								h4 {
+									padding: 0;
+									width: 100%;
+								}
+							}
+
+							.gatsby-image-wrapper, .left, .right {
+								position: inherit;
+								display: block;
+							}
+
+							.screenshots {
+								display: flex;
+								justify-content: space-between;
+
+								.left, .right {
+									position: relative;
+									left: 0;
+									right: 0;
+									height: auto;
+									max-width: 45%;
+								}
+							}
+						}
 					}
 				}
 			}
