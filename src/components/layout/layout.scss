@@ -217,7 +217,8 @@ a {
 		}
 	}
 
-	@media only screen and (max-width: 768px) {
+	// navbar query
+	@media only screen and (max-width: 1024px) {
 		main {
 			padding-top: $nav-padding-mobile;
 		}
@@ -322,24 +323,22 @@ a {
 				}
 			}
 		}
-	}
 
-	@media only screen and (max-width: 425px) {
 		.left-overlay {
 			margin-left: 0.5rem;
-
+	
 			.mobile {
 				display: block;
 				padding-bottom: 1rem;
 				margin:	0;
 				writing-mode: vertical-rl;
-
+	
 				&:hover {
 					opacity: 0.9;
 				}
 			}
 		}
-
+	
 		.right-overlay {
 			display: none;
 		}
