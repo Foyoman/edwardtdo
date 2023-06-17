@@ -152,8 +152,8 @@ $shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(
 							align-items: flex-end;
 						}
 
-						h4 {
-							padding-right: 10px;
+						h4, .icon {
+							margin-right: 10px;
 						}
 					}
 	
@@ -162,8 +162,8 @@ $shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(
 							right: 0;
 						}
 
-						h4 {
-							padding-left: 10px;
+						h4, .icon {
+							margin-left: 10px;
 						}
 					}
 	
@@ -232,6 +232,21 @@ $shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(
 							width: 250px;
 							font-family: 'Fira Code', monospace;
 							font-weight: 300;
+						}
+
+						.icon {
+							margin-top: 0.5rem;
+							width: fit-content;
+							
+							svg > path {
+								transition: 0.2s all;
+							}
+
+							&:hover {
+								svg > path {
+									color: mediumpurple;
+								}
+							}
 						}
 					}
 	

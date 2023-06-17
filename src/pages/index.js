@@ -5,6 +5,7 @@ import Seo from '../components/seo'
 import './home.scss';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import Button from '../components/button/button';
+import GitHubIcon from '@mui/icons-material/GitHub';
 import { SiJavascript, SiTypescript, SiRubyonrails, SiFirebase, SiMongodb, SiExpress, SiNextdotjs, SiNuxtdotjs, SiBitbucket, SiTailwindcss, SiHtml5, SiStorybook } from 'react-icons/si';
 import { DiRubyRough, DiSass, DiPython, DiCss3, DiReact, DiJqueryLogo, DiNodejsSmall, DiPostgresql, DiMysql } from 'react-icons/di';
 import { RiVuejsFill } from 'react-icons/ri';
@@ -112,6 +113,9 @@ const IndexPage = () => {
               <h4>
                 TypeScript, React, Redux, SCSS, MaterialUI
               </h4>
+              <a target="_blank" href="https://github.com/Foyoman/wizzy-wig-client" className="icon">
+                <GitHubIcon/>
+              </a>
             </div>
             <StaticImage 
               alt="A screenshot of wizzy-wig, a note-taking web app using markdown"
@@ -133,6 +137,9 @@ const IndexPage = () => {
               <h4>
                 React, Node, Express, MongoDB, SCSS, MaterialUI
               </h4>
+              <a target="_blank" href="https://github.com/Foyoman/tonguist-client" className="icon">
+                <GitHubIcon/>
+              </a>
             </div>
             <div className="screenshots">
               <StaticImage 
@@ -163,6 +170,9 @@ const IndexPage = () => {
               <h4>
                 React, Firebase, Bootstrap, SCSS
               </h4>
+              <a target="_blank" href="https://github.com/Foyoman/brain-train" className="icon">
+                <GitHubIcon/>
+              </a>
             </div>
             <StaticImage 
               alt="A screenshot of brain-train, a web-app for interactive brain-training games"
@@ -174,7 +184,7 @@ const IndexPage = () => {
           <div className="project left">
             <div className="description">
               <h3>
-                <a target="_blank" href="https://ana-anecdotal.netlify.app/">
+                <a target="_blank" href="https://github.com/Foyoman/ana">
                   ana
                 </a>
               </h3>
@@ -184,6 +194,9 @@ const IndexPage = () => {
               <h4>
                 Ruby on Rails
               </h4>
+              <a target="_blank" href="https://github.com/Foyoman/ana" className="icon">
+                <GitHubIcon/>
+              </a>
             </div>
             <StaticImage 
               alt="A screenshot of ana, a forum board"
