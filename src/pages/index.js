@@ -47,20 +47,8 @@ const IndexPage = () => {
 
         <div className="intro section" ref={introRef}>
           <p className="hello">Hi, I'm</p>
-          <div className="site-title">
-            <div className="title">
-              <div className="tag">
-                {`<edwardtdo`}
-                <span className={`closing-tag ${ expand ? 'expanded' : '' }`}>{` />`}</span>
-              </div>
-              <KeyboardArrowDownIcon className="chevron" onClick={handleClick} />
-            </div>
-            <div className={`props ${ expand ? 'expanded' : '' }`}>
-              <pre>    email="edwardtdo@gmail.com"</pre>
-              <pre>    linkedIn="<a href="https://www.linkedin.com/in/edwardtdo">https://www.linkedin.com/in/edwardtdo</a>"</pre>
-              <pre>    gitHub="<a href="https://www.github.com/Foyoman">https://www.github.com/Foyoman</a>"</pre>
-              {`/>`}
-            </div>
+          <div className="edward-do">
+            Edward Do.
           </div>
           <h2 className="i-am">I'm a full-stack software engineer.</h2>
           <p className="brief">
