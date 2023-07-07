@@ -3,7 +3,6 @@ import Layout from '../components/layout/layout'
 import { StaticImage } from 'gatsby-plugin-image'
 import Seo from '../components/seo'
 import './home.scss';
-import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import Button from '../components/button/button';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import { SiJavascript, SiTypescript, SiRubyonrails, SiFirebase, SiMongodb, SiExpress, SiNextdotjs, SiNuxtdotjs, SiBitbucket, SiTailwindcss, SiHtml5, SiStorybook } from 'react-icons/si';
