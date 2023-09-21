@@ -49,9 +49,9 @@ const IndexPage = () => {
           <div className="edward-do">
             Edward Do.
           </div>
-          <h2 className="i-am">I'm a full-stack software engineer.</h2>
+          <h2 className="i-am">I'm a full-stack software developer.</h2>
           <p className="brief">
-            I'm a passion driven full-stack software engineer, with a knack for problem-solving, a keen eye for developing intuitive user experiences, and an eagerness for feature-building.
+            I'm a passion driven full-stack software developer, with a knack for problem-solving, a keen eye for developing intuitive user experiences, and an eagerness for feature-building.
           </p>
           <Button 
             label="Learn more about me" 
