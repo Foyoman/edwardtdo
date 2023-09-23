@@ -66,13 +66,13 @@ const IndexPage = () => {
             About Me
           </h2>
           <p>
-            Hello! My name is Edward, and I have a passion for creating visions of highly interactive and functional applications. My interest in web/mobile development grew through my heavy usage of language learning apps such as Lingvist and Duolingo.
+            Hello! My name is Edward, and as I've mentioned, I do a lot of things in life out of passion and love. Whether if it's travelling, programming, or taking care of my dog Donut, I can assure you that I do what I do to make my heart happy.
           </p>
           <p>
-            At 18 years old, I uncovered a burning passion for travel and backpacking and since then I've always dreamt of finding a way to make this globally remote and mobile lifestyle sustainable. After several uni course changes and crises about what I was going to do for a living, I finally committed to following my natural touch and interest in technology and completed General Assembly's coding bootcamp in September 2022 and ended up uncovering a second life long passion in life.
+            I started out in the field of programming out of the natural interest I had for technology since a kid. Naturally, I was a gamer and a tech-head since a wee baby, so new gadgets and tech always fascinated me, and eventually my interest for language learning piqued my curiosity for application development, as I had always looked for the best app to practice with and always wondered how these apps worked under the hood. Gradually getting more into coding, I began self study in early 2022 with MOOC's, documentation, and, of course, YouTube tutorials, then eventually found myself committing to General Assembly's Software Engineering Immersive bootcamp in June, graduating in September of 2022. In November I landed my first role with LEAP Legal Software, left in March (for reasons you can ask me about), spent 5 months in Mexico experimenting with combining my two biggest passions in code and travel, and now I'm here! Hunting my next opportunity while grinding more code and personal projects. 
           </p>
           <p>
-            Now, I'm hoping to combine my 2 biggest passions in life as a fully remote developer. I’m currently open to job opportunities so please feel free to email or connect with me via LinkedIn.
+            As of the moment, I'm just looking for any opportunity to learn and collaborate with more experienced developers, so please feel free to contact with me through email or LinkedIn!
           </p>
           <StaticImage
             alt="A picture of me, Edward, at Machu Picchu posing with a thumbs up"
