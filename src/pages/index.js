@@ -51,7 +51,7 @@ const IndexPage = () => {
           </div>
           <h2 className="i-am">I'm a full-stack software developer.</h2>
           <p className="brief">
-            I'm a passion driven full-stack software developer, with a knack for problem-solving, a keen eye for developing intuitive user experiences, and an eagerness for feature-building.
+            I'm a passion driven full-stack software developer, meaning I do everything I do in this field for the love I've been fortunate enough to have developed for programming. From self study, to bootcamp courses, to passion projects, to volunteer work, to professional experience, I am always looking to get my grubby hands on coding experience. 
           </p>
           <Button 
             label="Learn more about me" 
