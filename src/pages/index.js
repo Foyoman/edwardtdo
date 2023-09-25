@@ -237,7 +237,7 @@ const IndexPage = () => {
               </p>
               <p>
               { selectedTab === "leap" ? 
-                "A developer for the global marketing team, responsible for the development of sites under all global domains. We employed a strong focus on component reusability, using isolated components driven development through the development of our UI component library based on our design system, and having everything linked to a headless CMS for easy access to our designers."
+                "A developer for the global marketing team, responsible for the development of sites under all global domains. We employed a strong focus on component reusability, using isolated components driven development through the use of our UI component library based on our design system, and having everything linked to a headless CMS for easy access to our designers. Our library of choice was Nuxt.js, we used Storybook for our UI library, and Storyblok was our CMS."
                 : 
                 "Accumulating possibly over 600 hours of coding over 12 weeks, this coding bootcamp provided the intense and immersive environment needed for me to maximise the potential of my deep dive into the world of programming. We went through full-stack development, learning the most used and modern frameworks, and were taught the best coding principles and patterns to follow to become good developers in any field of programming."
               }
